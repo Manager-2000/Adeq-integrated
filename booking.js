@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const PAYSTACK_KEY = "pk_test_8e2842d4d202ae95e064cf7343ed9766506d72bb";
-  const WHATSAPP_NUMBER = "2341234567890";
-  const SERVER_URL = "http://localhost:3000"; // Change when hosted
+  const WHATSAPP_NUMBER = "2348104058164";
+  const SERVER_URL = "https://manager-2000.github.io/Adeq-integrated/"; // Change when hosted
 
   const PRICES = {
     residential: { town: 30000, outskirt: 50000 },
@@ -234,7 +234,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ✅ Only sends email to client
   // ✅ REPLACE THIS FUNCTION in your booking.js
   async function sendClientEmail(bookingData) {
     try {
@@ -355,3 +354,4 @@ document.addEventListener("DOMContentLoaded", function () {
     handler.openIframe();
   }
 });
+
