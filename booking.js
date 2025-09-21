@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const PAYSTACK_KEY = "pk_test_8e2842d4d202ae95e064cf7343ed9766506d72bb";
-  const WHATSAPP_NUMBER = "2348104058164";
-  const SERVER_URL = "https://manager-2000.github.io/Adeq-integrated/"; // Change when hosted
+  const WHATSAPP_NUMBER = "2341234567890";
+  const SERVER_URL = "http://localhost:3000"; // Change when hosted
 
   const PRICES = {
     residential: { town: 30000, outskirt: 50000 },
@@ -28,6 +28,56 @@ document.addEventListener("DOMContentLoaded", function () {
   const preferredDate = document.getElementById("preferredDate");
   const projectLocation = document.getElementById("projectLocation");
   const projectDetails = document.getElementById("projectDetails");
+
+  // Add these utility functions at the top
+  function isUserLoggedIn() {
+    const isLoggedIn = localStorage.getItem("userLoggedIn");
+    const userData = JSON.parse(localStorage.getItem("currentUser") || "{}");
+    return !!(isLoggedIn && userData.id);
+  }
+
+  function getCurrentUser() {
+    return JSON.parse(localStorage.getItem("currentUser") || "{}");
+  }
+
+  function requireLogin(actionName = "complete this action") {
+    if (!isUserLoggedIn()) {
+      const authModal = document.getElementById("authModal");
+      if (authModal) {
+        authModal.classList.remove("hidden");
+
+        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
+        const verificationForm = document.getElementById("verificationForm");
+
+        if (loginForm) loginForm.classList.remove("hidden");
+        if (registerForm) registerForm.classList.add("hidden");
+        if (verificationForm) verificationForm.classList.add("hidden");
+      }
+
+      showNotification(`Please login to ${actionName}`, "error");
+      return false;
+    }
+    return true;
+  }
+
+  function showNotification(message, type = "info") {
+    const notification = document.createElement("div");
+    notification.className = `fixed top-4 right-4 z-50 px-4 py-3 rounded-lg shadow-lg transition-all duration-300 ${
+      type === "success"
+        ? "bg-green-500 text-white"
+        : type === "error"
+          ? "bg-red-500 text-white"
+          : "bg-blue-500 text-white"
+    }`;
+    notification.textContent = message;
+
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
+  }
 
   const formError = document.createElement("p");
   formError.id = "formError";
@@ -166,13 +216,29 @@ document.addEventListener("DOMContentLoaded", function () {
     payBtn.type = "button";
     payBtn.id = "paystackButton";
     payBtn.className =
-      "bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-4 rounded-lg font-semibold transition-colors w-full relative";
+      "requires-login bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-4 rounded-lg font-semibold transition-colors w-full relative";
     payBtn.innerHTML = `
-      <span class="pay-btn-text">Pay with Paystack</span>
-      <span class="pay-btn-loading hidden">
-        <i class="fas fa-spinner fa-spin mr-2"></i> Processing...
-      </span>
-    `;
+  <span class="requires-login pay-btn-text">Pay with Paystack</span>
+  <span class="pay-btn-loading hidden">
+    <i class="fas fa-spinner fa-spin mr-2"></i> Processing...
+  </span>
+`;
+
+    // Update the event listener
+    payBtn.addEventListener("click", function (e) {
+      // Check if user is logged in
+      if (!requireLogin("book services")) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // If logged in, process the payment
+      processPayment();
+    });
+
+    // Add to your dynamic options
+    dynamicOptions.appendChild(payBtn);
 
     locationSelect.addEventListener("change", refreshTotals);
     paymentRadios.addEventListener("change", function () {
@@ -291,6 +357,10 @@ document.addEventListener("DOMContentLoaded", function () {
       showError("Invalid payment amount. Please check your selection.");
       return;
     }
+    if (!requireLogin("book services")) {
+      return;
+    }
+    const user = getCurrentUser();
 
     setButtonLoading(true);
     showLoading();
