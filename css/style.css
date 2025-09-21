@@ -1,3 +1,65 @@
+/* mobile nav bar */
+.navbar-transition {
+  transition: all 0.3s ease;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s ease;
+  z-index: 100;
+  overflow-y: auto;
+}
+.mobile-menu.open {
+  right: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.auth-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.auth-modal.open {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+}
+
 /* ensure overlay text is readable */
 .hero-carousel .splide__slide h1 {
   text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
@@ -140,3 +202,129 @@
     white-space: nowrap;
   }
 }
+
+/* Email verification-digit */
+.verification-digit {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.verification-digit:focus {
+  border-color: #0e7490;
+  box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.1);
+  outline: none;
+}
+
+#verificationForm {
+  text-align: center;
+}
+
+#verificationForm p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.digit-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.verification-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* login/register button */
+
+/* Dropdown animation */
+#userDropdown {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+#userDropdown.show {
+  transform: translateY(0);
+  opacity: 1;
+  display: block;
+}
+
+/* Modern button styles */
+#authButton {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#authButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#authButton.logged-in {
+  background: linear-gradient(135deg, #0e7490 0%, #06b6d4 100%);
+}
+
+
+/* login requirement indicator */
+/* Add to your CSS */
+.requires-login {
+  position: relative;
+}
+
+.requires-login::after {
+  content: "🔒";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4444;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.requires-login:hover::before {
+  content: "Login required";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+
+/* dashboard css */
+
