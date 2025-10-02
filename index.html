@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,63 +26,66 @@
     />
     <link rel="stylesheet" href="css/style.css" />
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Poppins", "sans-serif"],
-            },
+```
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ["Poppins", "sans-serif"],
+        },
 
-            colors: {
-              primary: "#0e7490",
-              secondary: "#0c4a6e",
-              accent: "#0891b2",
-              light: "#f0f9ff",
-              red: "#EF4444",
-            },
-            animation: {
-              float: "float 6s ease-in-out infinite",
-              fadeIn: "fadeIn 1s ease-in-out",
-              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-              "bounce-slow": "bounce 3s infinite",
-            },
-            keyframes: {
-              float: {
-                "0%, 100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-10px)" },
-              },
-              fadeIn: {
-                "0%": { opacity: "0" },
-                "100%": { opacity: "1" },
-              },
-            },
+        colors: {
+          primary: "#0e7490",
+          secondary: "#0c4a6e",
+          accent: "#0891b2",
+          light: "#f0f9ff",
+          red: "#EF4444",
+        },
+        animation: {
+          float: "float 6s ease-in-out infinite",
+          fadeIn: "fadeIn 1s ease-in-out",
+          "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+          "bounce-slow": "bounce 3s infinite",
+        },
+        keyframes: {
+          float: {
+            "0%, 100%": { transform: "translateY(0)" },
+            "50%": { transform: "translateY(-10px)" },
+          },
+          fadeIn: {
+            "0%": { opacity: "0" },
+            "100%": { opacity: "1" },
           },
         },
-      };
+      },
+    },
+  };
 
-      document.addEventListener("DOMContentLoaded", function () {
-        if (typeof Splide === "undefined") {
-          console.error(
-            "Splide not loaded. Make sure the Splide script is included."
-          );
-          return;
-        }
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Splide === "undefined") {
+      console.error(
+        "Splide not loaded. Make sure the Splide script is included."
+      );
+      return;
+    }
 
-        new Splide(".hero-carousel", {
-          type: "loop",
-          autoplay: true,
-          interval: 5000, // 5 seconds
-          pauseOnHover: false,
-          arrows: false,
-          pagination: true,
-          height: "72vh",
-          breakpoints: {
-            768: { height: "60vh" },
-          },
-        }).mount();
-      });
-    </script>
+    new Splide(".hero-carousel", {
+      type: "loop",
+      autoplay: true,
+      interval: 5000, // 5 seconds
+      pauseOnHover: false,
+      arrows: false,
+      pagination: true,
+      height: "72vh",
+      breakpoints: {
+        768: { height: "60vh" },
+      },
+    }).mount();
+  });
+</script>
+```
+
   </head>
   <body class="font-sans bg-white">
     <!-- Improved Header -->
@@ -104,2477 +108,2480 @@
             >
           </div>
 
-          <!-- Desktop Nav - Improved spacing -->
-          <nav class="hidden lg:flex space-x-6">
-            <a
-              href="#home"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >About</a
-            >
-            <a
-              href="#services"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >Services</a
-            >
-            <a
-              href="#equipment"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >Equipment</a
-            >
-            <a
-              href="#booking"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >Booking</a
-            >
-            <a
-              href="#projects"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >Projects</a
-            >
-            <a
-              href="#contact"
-              class="text-white hover:text-blue-200 font-medium navbar-transition"
-              >Contact</a
-            >
-          </nav>
+```
+      <!-- Desktop Nav - Improved spacing -->
+      <nav class="hidden lg:flex space-x-6">
+        <a
+          href="#home"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >Services</a
+        >
+        <a
+          href="#equipment"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >Equipment</a
+        >
+        <a
+          href="#booking"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >Booking</a
+        >
+        <a
+          href="#projects"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >Projects</a
+        >
+        <a
+          href="#contact"
+          class="text-white hover:text-blue-200 font-medium navbar-transition"
+          >Contact</a
+        >
+      </nav>
 
-          <!-- Cart + Quote + Hamburger + Login -->
-          <div class="flex items-center space-x-4">
-            <!-- Cart -->
-            <div class="relative cursor-pointer" id="cartIcon">
-              <i class="fas fa-shopping-cart text-xl text-white"></i>
-              <span
-                class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                id="cartCount"
-                >0</span
-              >
-            </div>
+      <!-- Cart + Quote + Hamburger + Login -->
+      <div class="flex items-center space-x-4">
+        <!-- Cart -->
+        <div class="relative cursor-pointer" id="cartIcon">
+          <i class="fas fa-shopping-cart text-xl text-white"></i>
+          <span
+            class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+            id="cartCount"
+            >0</span
+          >
+        </div>
 
-            <!-- Login Button -->
-            <div
-              class="container mx-auto px-4 py-3 flex justify-between items-center"
-            >
-              <!-- Your other header content -->
+        <!-- Login Button -->
+        <div
+          class="container mx-auto px-4 py-3 flex justify-between items-center"
+        >
+          <!-- Your other header content -->
 
-              <div class="relative">
-                <button
-                  id="headerAuthButton"
-                  class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full transition-all duration-300 flex items-center"
-                >
-                  <i class="fas fa-user-circle text-xl mr-2"></i>
-                  <span id="authButtonText">Login</span>
-                </button>
-
-                <!-- User dropdown menu -->
-                <div
-                  id="userDropdown"
-                  class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg py-1 hidden z-50 border border-gray-200"
-                >
-                  <div class="px-4 py-2 border-b border-gray-100">
-                    <p class="text-sm font-medium" id="userDropdownName">
-                      User Name
-                    </p>
-                  </div>
-                  <a
-                    href="#"
-                    id="logoutButton"
-                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-50 transition duration-150"
-                  >
-                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Desktop Quote -->
-            <!-- <a
-              href="#booking"
-              class="hidden lg:inline-block bg-white text-primary hover:bg-blue-50 font-medium px-4 py-2 rounded-full transition-all duration-300 shadow-sm"
-            >
-              Request Quote
-            </a> -->
-
-            <!-- Hamburger - Improved styling -->
+          <div class="relative">
             <button
-              class="lg:hidden text-white focus:outline-none"
-              id="mobileMenuButton"
+              id="headerAuthButton"
+              class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full transition-all duration-300 flex items-center"
             >
-              <i class="fas fa-bars text-2xl"></i>
+              <i class="fas fa-user-circle text-xl mr-2"></i>
+              <span id="authButtonText">Login</span>
             </button>
-          </div>
-        </div>
-      </div>
-    </header>
 
-    <!-- Mobile Menu Sidebar -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="p-6">
-        <!-- Close button -->
-        <div class="flex justify-end mb-6">
-          <button id="closeMobileMenu" class="text-gray-500 hover:text-primary">
-            <i class="fas fa-times text-2xl"></i>
-          </button>
-        </div>
-
-        <!-- Navigation Links -->
-        <nav class="space-y-4">
-          <a
-            href="#home"
-            class="block py-3 px-4 text-primary font-semibold hover:bg-blue-50 rounded-lg transition-colors"
-            >Home</a
-          >
-          <a
-            href="#about"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
-            >About</a
-          >
-          <a
-            href="#services"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
-            >Services</a
-          >
-          <a
-            href="#equipment"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
-            >Equipment</a
-          >
-          <a
-            href="#booking"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
-            >Booking</a
-          >
-          <a
-            href="#projects"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
-            >Projects</a
-          >
-          <a
-            href="#contact"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
-            >Contact</a
-          >
-
-          <!-- Request Quote button -->
-          <div class="pt-4 mt-4 border-t border-gray-100">
-            <a
-              href="#booking"
-              class="block bg-primary hover:bg-secondary text-white text-center font-medium px-4 py-3 rounded-lg transition-colors"
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg py-1 hidden z-50 border border-gray-200"
             >
-              Request Quote
-            </a>
+              <div class="px-4 py-2 border-b border-gray-100">
+                <p class="text-sm font-medium" id="userDropdownName">
+                  User Name
+                </p>
+              </div>
+              <a
+                href="#"
+                id="logoutButton"
+                class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-50 transition duration-150"
+              >
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+              </a>
+            </div>
           </div>
-        </nav>
+        </div>
+
+        <!-- Desktop Quote -->
+        <!-- <a
+          href="#booking"
+          class="hidden lg:inline-block bg-white text-primary hover:bg-blue-50 font-medium px-4 py-2 rounded-full transition-all duration-300 shadow-sm"
+        >
+          Request Quote
+        </a> -->
+
+        <!-- Hamburger - Improved styling -->
+        <button
+          class="lg:hidden text-white focus:outline-none"
+          id="mobileMenuButton"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
     </div>
+  </div>
+</header>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
+<!-- Mobile Menu Sidebar -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="p-6">
+    <!-- Close button -->
+    <div class="flex justify-end mb-6">
+      <button id="closeMobileMenu" class="text-gray-500 hover:text-primary">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
 
-    <!-- HERO SECTION WITH SPLIDE CAROUSEL -->
-    <section id="home" class="relative overflow-hidden">
-      <div class="hero-carousel splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <!-- Slide 1 -->
-            <li class="splide__slide relative">
-              <img
-                src="img/logo.png.jpg"
-                alt="Borehole Drilling"
-                class="absolute inset-0 w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-              ></div>
-              <div
-                class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
-              >
-                <h1
-                  class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
-                >
-                  Professional Borehole Drilling & Water Solutions
-                </h1>
-                <p class="mt-4 text-white/90 max-w-2xl mx-auto">
-                  Serving Nigeria for 20+ years with reliable hydrogeophysical
-                  surveys, drilling, and pump installations.
-                </p>
-                <div class="mt-8 flex items-center justify-center gap-4">
-                  <a
-                    href="#contact"
-                    class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
-                    >Get Free Consultation</a
-                  >
-                  <a
-                    href="tel:+2348104237317"
-                    class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
-                  >
-                    <i class="fas fa-phone"></i> Call Now
-                  </a>
-                </div>
-              </div>
-            </li>
+    <!-- Navigation Links -->
+    <nav class="space-y-4">
+      <a
+        href="#home"
+        class="block py-3 px-4 text-primary font-semibold hover:bg-blue-50 rounded-lg transition-colors"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
+        >About</a
+      >
+      <a
+        href="#services"
+        class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
+        >Services</a
+      >
+      <a
+        href="#equipment"
+        class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
+        >Equipment</a
+      >
+      <a
+        href="#booking"
+        class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
+        >Booking</a
+      >
+      <a
+        href="#projects"
+        class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
+        >Projects</a
+      >
+      <a
+        href="#contact"
+        class="block py-3 px-4 text-gray-700 font-medium hover:bg-blue-50 rounded-lg transition-colors"
+        >Contact</a
+      >
 
-            <!-- Slide 2 -->
-            <li class="splide__slide relative">
-              <img
-                src="img/deen bh.webp"
-                alt="Hydrogeophysical Survey"
-                class="absolute inset-0 w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-              ></div>
-              <div
-                class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
-              >
-                <h1
-                  class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
-                >
-                  Advanced Water Detection Technology
-                </h1>
-                <p class="mt-4 text-white/90 max-w-2xl mx-auto">
-                  Using state-of-the-art ADMT and Pool Finder systems for
-                  accurate groundwater location.
-                </p>
-                <div class="mt-8 flex items-center justify-center gap-4">
-                  <a
-                    href="#equipment"
-                    class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
-                    >View Equipment</a
-                  >
-                  <a
-                    href="#contact"
-                    class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
-                  >
-                    <i class="fas fa-envelope"></i> Contact Us
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Slide 3 -->
-            <li class="splide__slide relative">
-              <img
-                src="images/hero3.jpg"
-                alt="Professional Drilling Team"
-                class="absolute inset-0 w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-              ></div>
-              <div
-                class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
-              >
-                <h1
-                  class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
-                >
-                  Professional Borehole Drilling Services
-                </h1>
-                <p class="mt-4 text-white/90 max-w-2xl mx-auto">
-                  With 150+ boreholes drilled, we bring expertise and precision
-                  to every project.
-                </p>
-                <div class="mt-8 flex items-center justify-center gap-4">
-                  <a
-                    href="#projects"
-                    class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
-                    >View Projects</a
-                  >
-                  <a
-                    href="#booking"
-                    class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
-                  >
-                    <i class="fas fa-clipboard-list"></i> Request Service
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Slide 4 -->
-            <li class="splide__slide relative">
-              <img
-                src="images/hero4.jpg"
-                alt="Pump Installation"
-                class="absolute inset-0 w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-              ></div>
-              <div
-                class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
-              >
-                <h1
-                  class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
-                >
-                  Complete Water Solutions
-                </h1>
-                <p class="mt-4 text-white/90 max-w-2xl mx-auto">
-                  From surveys to drilling and pump installation, ADEQ delivers
-                  end-to-end water solutions.
-                </p>
-                <div class="mt-8 flex items-center justify-center gap-4">
-                  <a
-                    href="#contact"
-                    class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
-                    >Get Free Consultation</a
-                  >
-                  <a
-                    href="tel:+2348104237317"
-                    class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
-                  >
-                    <i class="fas fa-phone"></i> Call Now
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST BADGES -->
-    <section class="px-6 py-6 bg-primary hover:bg-primary/90 text-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <div
-          class="flex flex-wrap items-center justify-center gap-6 md:gap-12 opacity-95"
+      <!-- Request Quote button -->
+      <div class="pt-4 mt-4 border-t border-gray-100">
+        <a
+          href="#booking"
+          class="block bg-primary hover:bg-secondary text-white text-center font-medium px-4 py-3 rounded-lg transition-colors"
         >
-          <div class="flex flex-col items-center">
-            <i class="fas fa-award text-3xl text-white mb-2"></i>
-            <span class="text-sm">NGWA Certified</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <i class="fas fa-medal text-3xl text-white mb-2"></i>
-            <span class="text-sm">20+ Years Experience</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <i class="fas fa-shield-alt text-3xl text-white mb-2"></i>
-            <span class="text-sm">ISO Certified</span>
-          </div>
-        </div>
+          Request Quote
+        </a>
       </div>
-    </section>
+    </nav>
+  </div>
+</div>
 
-    <!-- Stats Section -->
-    <section class="py-12 bg-white section-hidden" id="stats-section">
-      <div
-        class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
-      >
-        <!-- Boreholes -->
-        <div class="bg-light p-6 rounded-xl shadow stats-counter">
-          <div
-            class="text-5xl font-bold text-primary mb-2"
-            id="projectsCounter"
-          >
-            0
-          </div>
-          <div class="mt-2 text-lg text-gray-600">Boreholes Drilled</div>
-        </div>
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
 
-        <!-- Years of Experience -->
-        <div class="bg-light p-6 rounded-xl shadow stats-counter">
-          <div class="text-5xl font-bold text-primary mb-2" id="yearsCounter">
-            0
-          </div>
-          <div class="mt-2 text-lg text-gray-600">Years of Experience</div>
-        </div>
-
-        <!-- Success Rate -->
-        <div class="bg-light p-6 rounded-xl shadow stats-counter">
-          <div class="text-5xl font-bold text-primary mb-2" id="successCounter">
-            0
-          </div>
-          <div class="mt-2 text-lg text-gray-600">Success Rate</div>
-        </div>
-
-        <!-- Emergency Support -->
-        <div class="bg-light p-6 rounded-xl shadow stats-counter">
-          <div class="text-5xl font-bold text-primary mb-2">24/7</div>
-          <div class="mt-2 text-lg text-gray-600">Emergency Support</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-16 bg-light section-hidden">
-      <div
-        class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto"
-      >
-        <!-- Text Content -->
-        <div data-aos="fade-right">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
-            About ADEQ Water Solutions
-          </h2>
-          <p class="text-lg text-gray-700 mb-6">
-            With over
-            <span class="font-bold text-primary">15 years of experience</span>,
-            ADEQ has been a trusted name in groundwater solutions, serving
-            clients across residential, commercial, and mining sectors.
-          </p>
-          <p class="text-lg text-gray-700 mb-6">
-            Our team of experts utilizes cutting-edge technology and proven
-            methodologies to deliver reliable water solutions tailored to your
-            specific needs.
-          </p>
-
-          <!-- Features -->
-          <div class="mt-6 space-y-4">
-            <div class="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary mt-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <div>
-                <h4 class="font-semibold">Expert Team</h4>
-                <p class="text-sm text-gray-600">
-                  NGWA-trained geologists and engineers
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary mt-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <div>
-                <h4 class="font-semibold">Advanced Technology</h4>
-                <p class="text-sm text-gray-600">
-                  Latest drilling rigs and survey tools
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-primary mt-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <div>
-                <h4 class="font-semibold">Quality Assurance</h4>
-                <p class="text-sm text-gray-600">
-                  Reliable and long-lasting solutions
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image/Logo -->
-        <div data-aos="fade-left" class="rounded-2xl overflow-hidden shadow-xl">
+<!-- HERO SECTION WITH SPLIDE CAROUSEL -->
+<section id="home" class="relative overflow-hidden">
+  <div class="hero-carousel splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <!-- Slide 1 -->
+        <li class="splide__slide relative">
           <img
             src="img/logo.png.jpg"
-            alt="ADEQ Drilling Team"
-            class="w-full h-auto"
+            alt="Borehole Drilling"
+            class="absolute inset-0 w-full h-full object-cover"
           />
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white section-hidden">
-      <div class="container max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Our Expert Services
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive water solutions from survey to installation, tailored
-            to your specific needs.
-          </p>
-        </div>
-
-        <div
-          id="services-container"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <!-- Service 1 -->
           <div
-            class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          ></div>
+          <div
+            class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
           >
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+            <h1
+              class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
             >
-              <i class="fas fa-search-dollar text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Water Surveying</h3>
-            <p class="text-gray-600 mb-4">
-              Professional groundwater and mining surveys using advanced
-              technology to accurately locate water sources.
+              Professional Borehole Drilling & Water Solutions
+            </h1>
+            <p class="mt-4 text-white/90 max-w-2xl mx-auto">
+              Serving Nigeria for 20+ years with reliable hydrogeophysical
+              surveys, drilling, and pump installations.
             </p>
-            <a href="#booking" class="text-accent font-medium flex items-center"
-              >Learn more <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-          </div>
-
-          <!-- Service 2 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
-            >
-              <i class="fas fa-toolbox text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary mb-3">
-              Borehole Drilling
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Expert borehole drilling services for residential, commercial, and
-              agricultural water supply needs.
-            </p>
-            <a href="#booking" class="text-accent font-medium flex items-center"
-              >Learn more <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-          </div>
-
-          <!-- Service 3 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
-            >
-              <i class="fas fa-wrench text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Installation</h3>
-            <p class="text-gray-600 mb-4">
-              Complete pump and borehole installation services to ensure
-              efficient water delivery to your property.
-            </p>
-            <a href="#booking" class="text-accent font-medium flex items-center"
-              >Learn more <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-          </div>
-
-          <!-- Service 4 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
-            >
-              <i class="fas fa-industry text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Equipment Sales</h3>
-            <p class="text-gray-600 mb-4">
-              We offer top-quality groundwater survey equipment including ADMT
-              systems and pool finders.
-            </p>
-            <a
-              href="#equipment"
-              class="text-accent font-medium flex items-center"
-              >Learn more <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-          </div>
-
-          <!-- Service 5 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
-            >
-              <i class="fas fa-tint text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Water Tanks</h3>
-            <p class="text-gray-600 mb-4">
-              Installation of overhead water storage tanks from 4,000 to 40,000+
-              liters for reliable water storage.
-            </p>
-            <a href="#contact" class="text-accent font-medium flex items-center"
-              >Learn more <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-          </div>
-
-          <!-- Service 6 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
-            >
-              <i class="fas fa-headset text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Consultation</h3>
-            <p class="text-gray-600 mb-4">
-              Get expert advice on the best water solutions for your specific
-              needs and location.
-            </p>
-            <a href="#contact" class="text-accent font-medium flex items-center"
-              >Learn more <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-          </div>
-
-          <div class="text-center py-8">
-            <div
-              class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"
-            ></div>
-            <p class="text-gray-600">Loading services...</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Equipment Section -->
-    <section id="equipment" class="py-16 bg-light section-hidden">
-      <div class="container max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Featured Equipment
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            High-quality groundwater survey equipment for professionals and
-            enthusiasts.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Product 1 -->
-          <div
-            class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 equipment-item"
-          >
-            <!-- Image Slider -->
-            <div class="relative h-56 rounded-lg overflow-hidden mb-6">
-              <img
-                src="img/admt 1200ax.webp"
-                class="absolute inset-0 w-full h-full object-cover slider-image active"
-                alt="ADMT Image 1"
-              />
-              <img
-                src="img/admt.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 2"
-              />
-              <img
-                src="img/admt 200ax.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 3"
-              />
-            </div>
-
-            <h3 class="text-2xl font-bold text-primary mb-2">ADMT ZN System</h3>
-            <p class="text-gray-600 mb-4">
-              Advanced groundwater detection system...
-            </p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-secondary">₦200,000</span>
-              <button
-                class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
-                data-product="ADMT System"
-                data-price="12500"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </div>
-          <!-- Product 2 -->
-          <div
-            class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 equipment-item"
-          >
-            <!-- Image Slider -->
-            <div class="relative h-56 rounded-lg overflow-hidden mb-6">
-              <img
-                src="img/poolfinder-water.jpeg"
-                class="absolute inset-0 w-full h-full object-cover slider-image active"
-                alt="ADMT Image 1"
-              />
-              <img
-                src="img/admt gd.avif"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 2"
-              />
-              <img
-                src="img/admt.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 3"
-              />
-            </div>
-
-            <h3 class="text-2xl font-bold text-primary mb-2">
-              Pool Finder Pro
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Professional-grade water detection equipment designed for locating
-              underground water pools with high accuracy.
-            </p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-secondary">₦100,000</span>
-              <button
-                class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
-                data-product="ADMT System"
-                data-price="12500"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- Product 3 -->
-          <div
-            class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 equipment-item"
-          >
-            <!-- Image Slider -->
-            <div class="relative h-56 rounded-lg overflow-hidden mb-6">
-              <img
-                src="img/admt.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image active"
-                alt="ADMT Image 1"
-              />
-              <img
-                src="img/admt 200ax.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 2"
-              />
-              <img
-                src="img/admt 1200ax.webp"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 3"
-              />
-            </div>
-
-            <h3 class="text-2xl font-bold text-primary mb-2">
-              ADMT-300SX System
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Advanced groundwater detection system with precision mapping
-              technology for accurate water source location.
-            </p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-secondary">₦400,000</span>
-              <button
-                class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
-                data-product="ADMT System"
-                data-price="12500"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- Product 4 -->
-          <div
-            class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 hidden-product equipment-item hidden-equipment"
-          >
-            <!-- Image Slider -->
-            <div class="relative h-56 rounded-lg overflow-hidden mb-6">
-              <img
-                src="img/admt gd.avif"
-                class="absolute inset-0 w-full h-full object-cover slider-image active"
-                alt="ADMT Image 1"
-              />
-              <img
-                src="img/admt 200ax.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 2"
-              />
-              <img
-                src="img/admt.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 3"
-              />
-            </div>
-
-            <h3 class="text-2xl font-bold text-primary mb-2">
-              ADMT-GOLDEN ROD System
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Advanced groundwater detection system with precision mapping
-              technology for accurate water source location.
-            </p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-secondary">₦200,000</span>
-              <button
-                class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
-                data-product="ADMT System"
-                data-price="12500"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- Product 5 -->
-          <div
-            class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 hidden-product equipment-item hidden-equipment"
-          >
-            <!-- Image Slider -->
-            <div class="relative h-56 rounded-lg overflow-hidden mb-6">
-              <img
-                src="img/ABEM-Terrameter.png"
-                class="absolute inset-0 w-full h-full object-cover slider-image active"
-                alt="ADMT Image 1"
-              />
-              <img
-                src="img/admt 200ax.jpg"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 2"
-              />
-              <img
-                src="img/admt 1200ax.webp"
-                class="absolute inset-0 w-full h-full object-cover slider-image"
-                alt="ADMT Image 3"
-              />
-            </div>
-
-            <h3 class="text-2xl font-bold text-primary mb-2">
-              ABEM TERAMETER System
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Advanced groundwater detection system with precision mapping
-              technology for accurate water source location.
-            </p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-secondary">₦250,000</span>
-              <button
-                class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
-                data-product="ADMT System"
-                data-price="12500"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <button
-            id="viewMoreBtn"
-            class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full font-medium transition duration-300"
-          >
-            View All Equipment <i class="fas fa-arrow-down ml-2"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- booking form  -->
-    <section id="booking">
-      <div
-        class="max-w-4xl mx-auto bg-gradient-to-r from-primary to-secondary text-white section-hidden rounded-2xl p-8"
-      >
-        <h2 class="text-3xl font-bold mb-4">Book a Professional Survey</h2>
-        <form
-          id="bookingForm"
-          class="grid grid-cols-1 md:grid-cols-2 gap-6"
-          onsubmit="return false;"
-        >
-          <!-- Survey Type -->
-          <div class="md:col-span-2">
-            <label class="block mb-2 font-medium">Survey Type</label>
-            <select
-              id="surveyType"
-              class="w-full p-3 rounded bg-gray-100 text-gray-800"
-              required
-            >
-              <option value="">Select a service</option>
-              <option value="residential">Residential Water Survey</option>
-              <option value="commercial">Commercial Water Survey</option>
-              <option value="mining">Mining Survey</option>
-              <option value="borehole">Borehole Drilling Consultation</option>
-            </select>
-          </div>
-          <!-- Name -->
-          <div class="customer-field">
-            <label class="block mb-2 font-medium">Your Name</label>
-            <input
-              id="customerName"
-              type="text"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-              required
-            />
-          </div>
-          <!-- Email -->
-          <div class="customer-field">
-            <label class="block mb-2 font-medium">Email Address</label>
-            <input
-              id="customerEmail"
-              type="email"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-              required
-            />
-          </div>
-          <!-- Phone -->
-          <div class="customer-field">
-            <label class="block mb-2 font-medium">Phone Number</label>
-            <input
-              id="customerPhone"
-              type="tel"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-              required
-            />
-          </div>
-          <!-- Date -->
-          <div class="customer-field">
-            <label class="block mb-2 font-medium">Preferred Date</label>
-            <input
-              id="preferredDate"
-              type="date"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-              required
-            />
-          </div>
-          <!-- Quantity -->
-          <div class="customer-field">
-            <label class="block mb-2 font-medium">Number of Surveys</label>
-            <input
-              id="quantity"
-              type="number"
-              min="1"
-              value="1"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-            />
-          </div>
-          <!-- Location -->
-          <div class="customer-field md:col-span-2">
-            <label class="block mb-2 font-medium">Project Location</label>
-            <input
-              id="projectLocation"
-              type="text"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-              required
-            />
-          </div>
-          <!-- Details -->
-          <div class="customer-field md:col-span-2">
-            <label class="block mb-2 font-medium"
-              >Project Details (Optional)</label
-            >
-            <textarea
-              id="projectDetails"
-              class="w-full p-3 rounded bg-gray-50 text-gray-800"
-            ></textarea>
-          </div>
-          <div id="dynamicOptions" class="md:col-span-2 hidden"></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-light section-hidden">
-      <div class="max-w-7xl mx-auto px-4">
-        <!-- Section Header -->
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Our Completed Projects
-          </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            A selection of our successful borehole drilling, pump installation,
-            and geophysical survey projects across various locations.
-          </p>
-        </div>
-
-        <!-- Project Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <!-- Project Card 1 -->
-          <div
-            class="bg-light rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition duration-300 group relative"
-          >
-            <img
-              src="img/bh1.webp"
-              alt="Borehole Project"
-              class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
-            >
-              <p class="text-white text-lg font-semibold">Borehole Drilling</p>
-            </div>
-            <div class="p-4">
-              <p class="text-gray-600 text-xl mb-8">
-                Precision borehole drilling completed for a rural water supply
-                project.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project Card 2 -->
-          <div
-            class="bg-light rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition duration-300 group relative"
-          >
-            <img
-              src="img/pump instal.jpg"
-              alt="Pump Installation"
-              class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
-            >
-              <p class="text-white text-lg font-semibold">Pump Installation</p>
-            </div>
-            <div class="p-4">
-              <p class="text-gray-600 text-xl mb-8">
-                Installed high-efficiency pumps for a commercial irrigation
-                system.
-              </p>
-            </div>
-          </div>
-
-          <!-- Project Card 3 -->
-          <div
-            class="bg-light rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition duration-300 group relative"
-          >
-            <img
-              src="img/water-survey.jpg"
-              alt="Geophysical Survey"
-              class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
-            >
-              <p class="text-white text-lg font-semibold">Geophysical Survey</p>
-            </div>
-            <div class="p-4">
-              <p class="text-gray-600 text-xl mb-8">
-                Conducted advanced geophysical surveys to locate underground
-                water sources.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 bg-white section-hidden">
-      <div class="container mx-auto px-4 max-w-7xl">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-            What Our Clients Say
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our satisfied customers.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Testimonial 1 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4"
-              >
-                JD
-              </div>
-              <div>
-                <h4 class="font-bold">John Doe</h4>
-                <p class="text-gray-600">Residential Client</p>
-              </div>
-            </div>
-            <p class="text-gray-700">
-              "ADEQ found water where two other companies failed. Their
-              professional approach and advanced equipment made all the
-              difference for our farm."
-            </p>
-            <div class="flex text-accent mt-4">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4"
-              >
-                SM
-              </div>
-              <div>
-                <h4 class="font-bold">Sarah Miller</h4>
-                <p class="text-gray-600">Commercial Client</p>
-              </div>
-            </div>
-            <p class="text-gray-700">
-              "The borehole drilling service was exceptional. From survey to
-              installation, the team was professional, punctual, and delivered
-              exactly what was promised."
-            </p>
-            <div class="flex text-accent mt-4">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div
-            class="bg-light p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4"
-              >
-                RJ
-              </div>
-              <div>
-                <h4 class="font-bold">Robert Johnson</h4>
-                <p class="text-gray-600">Mining Company</p>
-              </div>
-            </div>
-            <p class="text-gray-700">
-              "We've been using ADEQ's surveying services for our mining
-              operations for years. Their accuracy and detailed reports have
-              saved us both time and resources."
-            </p>
-            <div class="flex text-accent mt-4">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-16 bg-light section-hidden">
-      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        <!-- Contact Information (Left) -->
-        <div>
-          <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-
-          <div class="space-y-6">
-            <!-- Address -->
-            <div class="flex items-start gap-4">
-              <i class="fas fa-map-marker-alt text-blue-500 text-xl mt-1"></i>
-              <div>
-                <h4 class="font-semibold">Our Office</h4>
-                <p class="text-gray-600 dark:text-gray-400">
-                  155 Gbagba Area, Airport Road, Ilorin Kwara State.
-                </p>
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="flex items-start gap-4">
-              <i class="fas fa-phone text-blue-500 text-xl mt-1"></i>
-              <div>
-                <h4 class="font-semibold">Call Us</h4>
-                <p class="text-gray-600 dark:text-gray-400">
-                  +234 810 423 7317
-                </p>
-                <p class="text-gray-600 dark:text-gray-400">
-                  +234 811 427 5025
-                </p>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="flex items-start gap-4">
-              <i class="fas fa-envelope text-blue-500 text-xl mt-1"></i>
-              <div>
-                <h4 class="font-semibold">Email Us</h4>
-                <p class="text-gray-600 dark:text-gray-400">
-                  info@adeqintegrated.com
-                </p>
-                <p class="text-gray-600 dark:text-gray-400">
-                  support@adeqintegrated.com
-                </p>
-              </div>
-            </div>
-
-            <!-- Working Hours -->
-            <div class="flex items-start gap-4">
-              <i class="fas fa-clock text-blue-500 text-xl mt-1"></i>
-              <div>
-                <h4 class="font-semibold">Working Hours</h4>
-                <p class="text-gray-600 dark:text-gray-400">
-                  Monday - Friday: 8am - 6pm
-                </p>
-                <p class="text-gray-600 dark:text-gray-400">
-                  Saturday: 9am - 2pm
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Google Map (Right) -->
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            class="w-full h-full min-h-[350px]"
-            src="https://www.google.com/maps?q=CGQ7%2B64+Ilorin,+Nigeria&output=embed"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="bg-secondary text-white pt-16 pb-8">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div class="flex items-center mb-6">
-              <div
-                class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg mr-3"
-              >
-                A
-              </div>
-              <span class="text-2xl font-bold">ADEQ</span>
-            </div>
-            <p class="mb-6">
-              Your reliable partner for comprehensive groundwater solutions,
-              equipment, and consulting services.
-            </p>
-            <div class="flex space-x-4">
+            <div class="mt-8 flex items-center justify-center gap-4">
               <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
+                href="#contact"
+                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
+                >Get Free Consultation</a
+              >
               <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
-                ><i class="fab fa-instagram"></i
-              ></a>
+                href="tel:+2348104237317"
+                class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
+              >
+                <i class="fas fa-phone"></i> Call Now
+              </a>
             </div>
           </div>
+        </li>
 
-          <div>
-            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#home"
-                  class="hover:text-accent transition duration-300"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="hover:text-accent transition duration-300"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="hover:text-accent transition duration-300"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#equipment"
-                  class="hover:text-accent transition duration-300"
-                  >Equipment</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  class="hover:text-accent transition duration-300"
-                  >Projects</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#booking"
-                  class="hover:text-accent transition duration-300"
-                  >Book a Survey</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-bold mb-6">Contact Us</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
-                <span>155 Gbagba Area, Airport Road, Ilorin Kwara State.</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-phone-alt mr-3 text-accent"></i>
-                <span>+234 810 423 7317</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-envelope mr-3 text-accent"></i>
-                <span>info@adeqwatersolutions.com</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-clock mr-3 text-accent"></i>
-                <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-bold mb-6">Newsletter</h3>
-            <p class="mb-4">
-              Subscribe to our newsletter for updates and tips on water
-              solutions.
+        <!-- Slide 2 -->
+        <li class="splide__slide relative">
+          <img
+            src="img/deen bh.webp"
+            alt="Hydrogeophysical Survey"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          ></div>
+          <div
+            class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
+          >
+            <h1
+              class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
+            >
+              Advanced Water Detection Technology
+            </h1>
+            <p class="mt-4 text-white/90 max-w-2xl mx-auto">
+              Using state-of-the-art ADMT and Pool Finder systems for
+              accurate groundwater location.
             </p>
-            <form class="flex flex-col space-y-3">
-              <input
-                type="email"
-                placeholder="Your email address"
-                class="px-4 py-2 rounded-lg text-gray-800"
-              />
-              <button
-                type="submit"
-                class="bg-accent hover:bg-cyan-700 text-white py-2 rounded-lg transition duration-300"
+            <div class="mt-8 flex items-center justify-center gap-4">
+              <a
+                href="#equipment"
+                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
+                >View Equipment</a
               >
-                Subscribe
-              </button>
-            </form>
+              <a
+                href="#contact"
+                class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
+              >
+                <i class="fas fa-envelope"></i> Contact Us
+              </a>
+            </div>
           </div>
-        </div>
+        </li>
 
-        <div class="border-t border-white/20 mt-12 pt-8 text-center">
-          <p>&copy; 2023 ADEQ Water Solutions. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+        <!-- Slide 3 -->
+        <li class="splide__slide relative">
+          <img
+            src="images/hero3.jpg"
+            alt="Professional Drilling Team"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          ></div>
+          <div
+            class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
+          >
+            <h1
+              class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
+            >
+              Professional Borehole Drilling Services
+            </h1>
+            <p class="mt-4 text-white/90 max-w-2xl mx-auto">
+              With 150+ boreholes drilled, we bring expertise and precision
+              to every project.
+            </p>
+            <div class="mt-8 flex items-center justify-center gap-4">
+              <a
+                href="#projects"
+                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
+                >View Projects</a
+              >
+              <a
+                href="#booking"
+                class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
+              >
+                <i class="fas fa-clipboard-list"></i> Request Service
+              </a>
+            </div>
+          </div>
+        </li>
 
-    <!-- Back to Top Button -->
-    <button
-      id="backToTop"
-      class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-white shadow-lg hidden"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button>
+        <!-- Slide 4 -->
+        <li class="splide__slide relative">
+          <img
+            src="images/hero4.jpg"
+            alt="Pump Installation"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          ></div>
+          <div
+            class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col justify-center h-[72vh] md:h-[80vh]"
+          >
+            <h1
+              class="text-3xl md:text-5xl font-extrabold leading-tight text-white drop-shadow"
+            >
+              Complete Water Solutions
+            </h1>
+            <p class="mt-4 text-white/90 max-w-2xl mx-auto">
+              From surveys to drilling and pump installation, ADEQ delivers
+              end-to-end water solutions.
+            </p>
+            <div class="mt-8 flex items-center justify-center gap-4">
+              <a
+                href="#contact"
+                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-semibold shadow"
+                >Get Free Consultation</a
+              >
+              <a
+                href="tel:+2348104237317"
+                class="px-6 py-3 bg-white/90 hover:bg-white text-primary font-semibold rounded-md flex items-center gap-2"
+              >
+                <i class="fas fa-phone"></i> Call Now
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Shopping Cart Modal -->
+<!-- TRUST BADGES -->
+<section class="px-6 py-6 bg-primary hover:bg-primary/90 text-white">
+  <div class="max-w-7xl mx-auto px-6">
     <div
-      id="cartModal"
-      class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4"
+      class="flex flex-wrap items-center justify-center gap-6 md:gap-12 opacity-95"
     >
+      <div class="flex flex-col items-center">
+        <i class="fas fa-award text-3xl text-white mb-2"></i>
+        <span class="text-sm">NGWA Certified</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-medal text-3xl text-white mb-2"></i>
+        <span class="text-sm">20+ Years Experience</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-shield-alt text-3xl text-white mb-2"></i>
+        <span class="text-sm">ISO Certified</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-12 bg-white section-hidden" id="stats-section">
+  <div
+    class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+  >
+    <!-- Boreholes -->
+    <div class="bg-light p-6 rounded-xl shadow stats-counter">
       <div
-        class="bg-white rounded-xl w-full max-w-md max-h-[80vh] overflow-y-auto"
+        class="text-5xl font-bold text-primary mb-2"
+        id="projectsCounter"
       >
-        <div class="p-6 border-b">
-          <div class="flex justify-between items-center">
-            <h3 class="text-xl font-bold text-primary">Your Cart</h3>
-            <button id="closeCart" class="text-gray-500 hover:text-gray-700">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-        <div class="p-6">
-          <div id="cartItems" class="mb-6">
-            <!-- Cart items will be added here dynamically -->
-            <p id="emptyCartMessage" class="text-gray-500 text-center">
-              Your cart is empty
+        0
+      </div>
+      <div class="mt-2 text-lg text-gray-600">Boreholes Drilled</div>
+    </div>
+
+    <!-- Years of Experience -->
+    <div class="bg-light p-6 rounded-xl shadow stats-counter">
+      <div class="text-5xl font-bold text-primary mb-2" id="yearsCounter">
+        0
+      </div>
+      <div class="mt-2 text-lg text-gray-600">Years of Experience</div>
+    </div>
+
+    <!-- Success Rate -->
+    <div class="bg-light p-6 rounded-xl shadow stats-counter">
+      <div class="text-5xl font-bold text-primary mb-2" id="successCounter">
+        0
+      </div>
+      <div class="mt-2 text-lg text-gray-600">Success Rate</div>
+    </div>
+
+    <!-- Emergency Support -->
+    <div class="bg-light p-6 rounded-xl shadow stats-counter">
+      <div class="text-5xl font-bold text-primary mb-2">24/7</div>
+      <div class="mt-2 text-lg text-gray-600">Emergency Support</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-16 bg-light section-hidden">
+  <div
+    class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto"
+  >
+    <!-- Text Content -->
+    <div data-aos="fade-right">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
+        About ADEQ Water Solutions
+      </h2>
+      <p class="text-lg text-gray-700 mb-6">
+        With over
+        <span class="font-bold text-primary">15 years of experience</span>,
+        ADEQ has been a trusted name in groundwater solutions, serving
+        clients across residential, commercial, and mining sectors.
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        Our team of experts utilizes cutting-edge technology and proven
+        methodologies to deliver reliable water solutions tailored to your
+        specific needs.
+      </p>
+
+      <!-- Features -->
+      <div class="mt-6 space-y-4">
+        <div class="flex items-start gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-primary mt-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <div>
+            <h4 class="font-semibold">Expert Team</h4>
+            <p class="text-sm text-gray-600">
+              NGWA-trained geologists and engineers
             </p>
           </div>
-          <div class="border-t pt-4">
-            <div class="flex justify-between mb-2">
-              <span class="font-medium">Subtotal:</span>
-              <span id="cartSubtotal" class="font-bold">₦0.00</span>
-            </div>
-            <button
-              id="checkoutButton"
-              class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg font-medium transition duration-300"
-            >
-              Proceed to Checkout
-            </button>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-primary mt-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <div>
+            <h4 class="font-semibold">Advanced Technology</h4>
+            <p class="text-sm text-gray-600">
+              Latest drilling rigs and survey tools
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-primary mt-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <div>
+            <h4 class="font-semibold">Quality Assurance</h4>
+            <p class="text-sm text-gray-600">
+              Reliable and long-lasting solutions
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Paystack Payment Modal -->
-    <!-- <div id="paymentModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl w-full max-w-md p-6">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-primary">Complete Payment</h3>
-                <button id="closePaymentModal" class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="space-y-4">
-                <div class="mb-4">
-                  <label for="customersName" class="block text-sm font-medium text-gray-700">Full Name</label>
-                  <input type="text" id="customersName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
-                <div class="mb-4">
-                <label for="customersPhone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="tel" id="customersPhone" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
-                </div>
-                <div>
-                    <label class="block mb-2 font-medium">Email</label>
-                    <input type="email" id="customersEmail" class="w-full px-4 py-2 border rounded-lg" placeholder="Your email" required>
-                </div>
-                <div>
-                    <label class="block mb-2 font-medium">Amount</label>
-                    <input type="text" id="paymentAmount" class="w-full px-4 py-2 border rounded-lg bg-gray-100" readonly>
-                </div>
-                <button id="payWithPaystack" class="paystack-button w-full">
-                    Pay Now with Paystack
-                </button>
-            </div>
-        </div>
-    </div> -->
+    <!-- Image/Logo -->
+    <div data-aos="fade-left" class="rounded-2xl overflow-hidden shadow-xl">
+      <img
+        src="img/logo.png.jpg"
+        alt="ADEQ Drilling Team"
+        class="w-full h-auto"
+      />
+    </div>
+  </div>
+</section>
 
-    <!-- Payment Modal -->
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white section-hidden">
+  <div class="container max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+        Our Expert Services
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Comprehensive water solutions from survey to installation, tailored
+        to your specific needs.
+      </p>
+    </div>
+
     <div
-      id="paymentModal"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+      id="services-container"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
     >
-      <div class="bg-white rounded-lg p-6 w-full max-w-md">
-        <h2 class="text-2xl font-bold text-primary mb-4">
-          Complete Your Purchase
-        </h2>
+      <!-- Service 1 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+        >
+          <i class="fas fa-search-dollar text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-3">Water Surveying</h3>
+        <p class="text-gray-600 mb-4">
+          Professional groundwater and mining surveys using advanced
+          technology to accurately locate water sources.
+        </p>
+        <a href="#booking" class="text-accent font-medium flex items-center"
+          >Learn more <i class="fas fa-arrow-right ml-2"></i
+        ></a>
+      </div>
 
-        <div class="mb-4">
-          <label
-            for="customersName"
-            class="block text-sm font-medium text-gray-700"
-            >Full Name</label
-          >
-          <input
-            type="text"
-            id="customersName"
-            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-            required
+      <!-- Service 2 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+        >
+          <i class="fas fa-toolbox text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-3">
+          Borehole Drilling
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Expert borehole drilling services for residential, commercial, and
+          agricultural water supply needs.
+        </p>
+        <a href="#booking" class="text-accent font-medium flex items-center"
+          >Learn more <i class="fas fa-arrow-right ml-2"></i
+        ></a>
+      </div>
+
+      <!-- Service 3 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+        >
+          <i class="fas fa-wrench text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-3">Installation</h3>
+        <p class="text-gray-600 mb-4">
+          Complete pump and borehole installation services to ensure
+          efficient water delivery to your property.
+        </p>
+        <a href="#booking" class="text-accent font-medium flex items-center"
+          >Learn more <i class="fas fa-arrow-right ml-2"></i
+        ></a>
+      </div>
+
+      <!-- Service 4 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+        >
+          <i class="fas fa-industry text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-3">Equipment Sales</h3>
+        <p class="text-gray-600 mb-4">
+          We offer top-quality groundwater survey equipment including ADMT
+          systems and pool finders.
+        </p>
+        <a
+          href="#equipment"
+          class="text-accent font-medium flex items-center"
+          >Learn more <i class="fas fa-arrow-right ml-2"></i
+        ></a>
+      </div>
+
+      <!-- Service 5 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+        >
+          <i class="fas fa-tint text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-3">Water Tanks</h3>
+        <p class="text-gray-600 mb-4">
+          Installation of overhead water storage tanks from 4,000 to 40,000+
+          liters for reliable water storage.
+        </p>
+        <a href="#contact" class="text-accent font-medium flex items-center"
+          >Learn more <i class="fas fa-arrow-right ml-2"></i
+        ></a>
+      </div>
+
+      <!-- Service 6 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4"
+        >
+          <i class="fas fa-headset text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-3">Consultation</h3>
+        <p class="text-gray-600 mb-4">
+          Get expert advice on the best water solutions for your specific
+          needs and location.
+        </p>
+        <a href="#contact" class="text-accent font-medium flex items-center"
+          >Learn more <i class="fas fa-arrow-right ml-2"></i
+        ></a>
+      </div>
+
+      <div class="text-center py-8">
+        <div
+          class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"
+        ></div>
+        <p class="text-gray-600">Loading services...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Equipment Section -->
+<section id="equipment" class="py-16 bg-light section-hidden">
+  <div class="container max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+        Featured Equipment
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        High-quality groundwater survey equipment for professionals and
+        enthusiasts.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Product 1 -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 equipment-item"
+      >
+        <!-- Image Slider -->
+        <div class="relative h-56 rounded-lg overflow-hidden mb-6">
+          <img
+            src="img/admt 1200ax.webp"
+            class="absolute inset-0 w-full h-full object-cover slider-image active"
+            alt="ADMT Image 1"
+          />
+          <img
+            src="img/admt.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 2"
+          />
+          <img
+            src="img/admt 200ax.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 3"
           />
         </div>
 
+        <h3 class="text-2xl font-bold text-primary mb-2">ADMT ZN System</h3>
+        <p class="text-gray-600 mb-4">
+          Advanced groundwater detection system...
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-secondary">₦200,000</span>
+          <button
+            class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
+            data-product="ADMT System"
+            data-price="32500"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 equipment-item"
+      >
+        <!-- Image Slider -->
+        <div class="relative h-56 rounded-lg overflow-hidden mb-6">
+          <img
+            src="img/poolfinder-water.jpeg"
+            class="absolute inset-0 w-full h-full object-cover slider-image active"
+            alt="ADMT Image 1"
+          />
+          <img
+            src="img/admt gd.avif"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 2"
+          />
+          <img
+            src="img/admt.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 3"
+          />
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          Pool Finder Pro
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Professional-grade water detection equipment designed for locating
+          underground water pools with high accuracy.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-secondary">₦100,000</span>
+          <button
+            class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
+            data-product="ADMT System"
+            data-price="12500"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 equipment-item"
+      >
+        <!-- Image Slider -->
+        <div class="relative h-56 rounded-lg overflow-hidden mb-6">
+          <img
+            src="img/admt.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image active"
+            alt="ADMT Image 1"
+          />
+          <img
+            src="img/admt 200ax.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 2"
+          />
+          <img
+            src="img/admt 1200ax.webp"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 3"
+          />
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          ADMT-300SX System
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Advanced groundwater detection system with precision mapping
+          technology for accurate water source location.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-secondary">₦400,000</span>
+          <button
+            class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
+            data-product="ADMT System"
+            data-price="12500"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 hidden-product equipment-item hidden-equipment"
+      >
+        <!-- Image Slider -->
+        <div class="relative h-56 rounded-lg overflow-hidden mb-6">
+          <img
+            src="img/admt gd.avif"
+            class="absolute inset-0 w-full h-full object-cover slider-image active"
+            alt="ADMT Image 1"
+          />
+          <img
+            src="img/admt 200ax.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 2"
+          />
+          <img
+            src="img/admt.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 3"
+          />
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          ADMT-GOLDEN ROD System
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Advanced groundwater detection system with precision mapping
+          technology for accurate water source location.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-secondary">₦200,000</span>
+          <button
+            class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
+            data-product="ADMT System"
+            data-price="12500"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div
+        class="bg-white p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300 hidden-product equipment-item hidden-equipment"
+      >
+        <!-- Image Slider -->
+        <div class="relative h-56 rounded-lg overflow-hidden mb-6">
+          <img
+            src="img/ABEM-Terrameter.png"
+            class="absolute inset-0 w-full h-full object-cover slider-image active"
+            alt="ADMT Image 1"
+          />
+          <img
+            src="img/admt 200ax.jpg"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 2"
+          />
+          <img
+            src="img/admt 1200ax.webp"
+            class="absolute inset-0 w-full h-full object-cover slider-image"
+            alt="ADMT Image 3"
+          />
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          ABEM TERAMETER System
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Advanced groundwater detection system with precision mapping
+          technology for accurate water source location.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-secondary">₦250,000</span>
+          <button
+            class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full transition duration-300 add-to-cart"
+            data-product="ADMT System"
+            data-price="12500"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <button
+        id="viewMoreBtn"
+        class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full font-medium transition duration-300"
+      >
+        View All Equipment <i class="fas fa-arrow-down ml-2"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- booking form  -->
+<section id="booking">
+  <div
+    class="max-w-4xl mx-auto bg-gradient-to-r from-primary to-secondary text-white section-hidden rounded-2xl p-8"
+  >
+    <h2 class="text-3xl font-bold mb-4">Book a Professional Survey</h2>
+    <form
+      id="bookingForm"
+      class="grid grid-cols-1 md:grid-cols-2 gap-6"
+      onsubmit="return false;"
+    >
+      <!-- Survey Type -->
+      <div class="md:col-span-2">
+        <label class="block mb-2 font-medium">Survey Type</label>
+        <select
+          id="surveyType"
+          class="w-full p-3 rounded bg-gray-100 text-gray-800"
+          required
+        >
+          <option value="">Select a service</option>
+          <option value="residential">Residential Water Survey</option>
+          <option value="commercial">Commercial Water Survey</option>
+          <option value="mining">Mining Survey</option>
+          <option value="borehole">Borehole Drilling Consultation</option>
+        </select>
+      </div>
+      <!-- Name -->
+      <div class="customer-field">
+        <label class="block mb-2 font-medium">Your Name</label>
+        <input
+          id="customerName"
+          type="text"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+          required
+        />
+      </div>
+      <!-- Email -->
+      <div class="customer-field">
+        <label class="block mb-2 font-medium">Email Address</label>
+        <input
+          id="customerEmail"
+          type="email"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+          required
+        />
+      </div>
+      <!-- Phone -->
+      <div class="customer-field">
+        <label class="block mb-2 font-medium">Phone Number</label>
+        <input
+          id="customerPhone"
+          type="tel"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+          required
+        />
+      </div>
+      <!-- Date -->
+      <div class="customer-field">
+        <label class="block mb-2 font-medium">Preferred Date</label>
+        <input
+          id="preferredDate"
+          type="date"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+          required
+        />
+      </div>
+      <!-- Quantity -->
+      <div class="customer-field">
+        <label class="block mb-2 font-medium">Number of Surveys</label>
+        <input
+          id="quantity"
+          type="number"
+          min="1"
+          value="1"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+        />
+      </div>
+      <!-- Location -->
+      <div class="customer-field md:col-span-2">
+        <label class="block mb-2 font-medium">Project Location</label>
+        <input
+          id="projectLocation"
+          type="text"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+          required
+        />
+      </div>
+      <!-- Details -->
+      <div class="customer-field md:col-span-2">
+        <label class="block mb-2 font-medium"
+          >Project Details (Optional)</label
+        >
+        <textarea
+          id="projectDetails"
+          class="w-full p-3 rounded bg-gray-50 text-gray-800"
+        ></textarea>
+      </div>
+      <div id="dynamicOptions" class="md:col-span-2 hidden"></div>
+    </form>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 bg-light section-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+        Our Completed Projects
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        A selection of our successful borehole drilling, pump installation,
+        and geophysical survey projects across various locations.
+      </p>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Project Card 1 -->
+      <div
+        class="bg-light rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition duration-300 group relative"
+      >
+        <img
+          src="img/bh1.webp"
+          alt="Borehole Project"
+          class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+        />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+        >
+          <p class="text-white text-lg font-semibold">Borehole Drilling</p>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-600 text-xl mb-8">
+            Precision borehole drilling completed for a rural water supply
+            project.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div
+        class="bg-light rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition duration-300 group relative"
+      >
+        <img
+          src="img/pump instal.jpg"
+          alt="Pump Installation"
+          class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+        />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+        >
+          <p class="text-white text-lg font-semibold">Pump Installation</p>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-600 text-xl mb-8">
+            Installed high-efficiency pumps for a commercial irrigation
+            system.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div
+        class="bg-light rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition duration-300 group relative"
+      >
+        <img
+          src="img/water-survey.jpg"
+          alt="Geophysical Survey"
+          class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+        />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+        >
+          <p class="text-white text-lg font-semibold">Geophysical Survey</p>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-600 text-xl mb-8">
+            Conducted advanced geophysical surveys to locate underground
+            water sources.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 bg-white section-hidden">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+        What Our Clients Say
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Don't just take our word for it - hear from our satisfied customers.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Testimonial 1 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300"
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4"
+          >
+            JD
+          </div>
+          <div>
+            <h4 class="font-bold">John Doe</h4>
+            <p class="text-gray-600">Residential Client</p>
+          </div>
+        </div>
+        <p class="text-gray-700">
+          "ADEQ found water where two other companies failed. Their
+          professional approach and advanced equipment made all the
+          difference for our farm."
+        </p>
+        <div class="flex text-accent mt-4">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300"
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4"
+          >
+            SM
+          </div>
+          <div>
+            <h4 class="font-bold">Sarah Miller</h4>
+            <p class="text-gray-600">Commercial Client</p>
+          </div>
+        </div>
+        <p class="text-gray-700">
+          "The borehole drilling service was exceptional. From survey to
+          installation, the team was professional, punctual, and delivered
+          exactly what was promised."
+        </p>
+        <div class="flex text-accent mt-4">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div
+        class="bg-light p-6 rounded-xl shadow-md transform hover:-translate-y-2 transition duration-300"
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-4"
+          >
+            RJ
+          </div>
+          <div>
+            <h4 class="font-bold">Robert Johnson</h4>
+            <p class="text-gray-600">Mining Company</p>
+          </div>
+        </div>
+        <p class="text-gray-700">
+          "We've been using ADEQ's surveying services for our mining
+          operations for years. Their accuracy and detailed reports have
+          saved us both time and resources."
+        </p>
+        <div class="flex text-accent mt-4">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-16 bg-light section-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <!-- Contact Information (Left) -->
+    <div>
+      <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+
+      <div class="space-y-6">
+        <!-- Address -->
+        <div class="flex items-start gap-4">
+          <i class="fas fa-map-marker-alt text-blue-500 text-xl mt-1"></i>
+          <div>
+            <h4 class="font-semibold">Our Office</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              155 Gbagba Area, Airport Road, Ilorin Kwara State.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-start gap-4">
+          <i class="fas fa-phone text-blue-500 text-xl mt-1"></i>
+          <div>
+            <h4 class="font-semibold">Call Us</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              +234 810 423 7317
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+              +234 811 427 5025
+            </p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-start gap-4">
+          <i class="fas fa-envelope text-blue-500 text-xl mt-1"></i>
+          <div>
+            <h4 class="font-semibold">Email Us</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              info@adeqintegrated.com
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+              support@adeqintegrated.com
+            </p>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="flex items-start gap-4">
+          <i class="fas fa-clock text-blue-500 text-xl mt-1"></i>
+          <div>
+            <h4 class="font-semibold">Working Hours</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              Monday - Friday: 8am - 6pm
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+              Saturday: 9am - 2pm
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map (Right) -->
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <iframe
+        class="w-full h-full min-h-[350px]"
+        src="https://www.google.com/maps?q=CGQ7%2B64+Ilorin,+Nigeria&output=embed"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-secondary text-white pt-16 pb-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center mb-6">
+          <div
+            class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg mr-3"
+          >
+            A
+          </div>
+          <span class="text-2xl font-bold">ADEQ</span>
+        </div>
+        <p class="mb-6">
+          Your reliable partner for comprehensive groundwater solutions,
+          equipment, and consulting services.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition duration-300"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href="#home"
+              class="hover:text-accent transition duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="hover:text-accent transition duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="hover:text-accent transition duration-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#equipment"
+              class="hover:text-accent transition duration-300"
+              >Equipment</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="hover:text-accent transition duration-300"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#booking"
+              class="hover:text-accent transition duration-300"
+              >Book a Survey</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold mb-6">Contact Us</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+            <span>155 Gbagba Area, Airport Road, Ilorin Kwara State.</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-phone-alt mr-3 text-accent"></i>
+            <span>+234 810 423 7317</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-envelope mr-3 text-accent"></i>
+            <span>info@adeqwatersolutions.com</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-clock mr-3 text-accent"></i>
+            <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold mb-6">Newsletter</h3>
+        <p class="mb-4">
+          Subscribe to our newsletter for updates and tips on water
+          solutions.
+        </p>
+        <form class="flex flex-col space-y-3">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="px-4 py-2 rounded-lg text-gray-800"
+          />
+          <button
+            type="submit"
+            class="bg-accent hover:bg-cyan-700 text-white py-2 rounded-lg transition duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 mt-12 pt-8 text-center">
+      <p>&copy; 2023 ADEQ Water Solutions. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button
+  id="backToTop"
+  class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-white shadow-lg hidden"
+>
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Shopping Cart Modal -->
+<div
+  id="cartModal"
+  class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4"
+>
+  <div
+    class="bg-white rounded-xl w-full max-w-md max-h-[80vh] overflow-y-auto"
+  >
+    <div class="p-6 border-b">
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl font-bold text-primary">Your Cart</h3>
+        <button id="closeCart" class="text-gray-500 hover:text-gray-700">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="p-6">
+      <div id="cartItems" class="mb-6">
+        <!-- Cart items will be added here dynamically -->
+        <p id="emptyCartMessage" class="text-gray-500 text-center">
+          Your cart is empty
+        </p>
+      </div>
+      <div class="border-t pt-4">
+        <div class="flex justify-between mb-2">
+          <span class="font-medium">Subtotal:</span>
+          <span id="cartSubtotal" class="font-bold">₦0.00</span>
+        </div>
+        <button
+          id="checkoutButton"
+          class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg font-medium transition duration-300"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Paystack Payment Modal -->
+<!-- <div id="paymentModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl w-full max-w-md p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-primary">Complete Payment</h3>
+            <button id="closePaymentModal" class="text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="space-y-4">
+            <div class="mb-4">
+              <label for="customersName" class="block text-sm font-medium text-gray-700">Full Name</label>
+              <input type="text" id="customersName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+            <div class="mb-4">
+            <label for="customersPhone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input type="tel" id="customersPhone" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+            </div>
+            <div>
+                <label class="block mb-2 font-medium">Email</label>
+                <input type="email" id="customersEmail" class="w-full px-4 py-2 border rounded-lg" placeholder="Your email" required>
+            </div>
+            <div>
+                <label class="block mb-2 font-medium">Amount</label>
+                <input type="text" id="paymentAmount" class="w-full px-4 py-2 border rounded-lg bg-gray-100" readonly>
+            </div>
+            <button id="payWithPaystack" class="paystack-button w-full">
+                Pay Now with Paystack
+            </button>
+        </div>
+    </div>
+</div> -->
+
+<!-- Payment Modal -->
+<div
+  id="paymentModal"
+  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+>
+  <div class="bg-white rounded-lg p-6 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-primary mb-4">
+      Complete Your Purchase
+    </h2>
+
+    <div class="mb-4">
+      <label
+        for="customersName"
+        class="block text-sm font-medium text-gray-700"
+        >Full Name</label
+      >
+      <input
+        type="text"
+        id="customersName"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="customersPhone"
+        class="block text-sm font-medium text-gray-700"
+        >Phone Number</label
+      >
+      <input
+        type="tel"
+        id="customersPhone"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="customersEmail"
+        class="block text-sm font-medium text-gray-700"
+        >Email Address</label
+      >
+      <input
+        type="email"
+        id="customersEmail"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700"
+        >Amount to Pay</label
+      >
+      <input
+        type="text"
+        id="paymentAmount"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100"
+        readonly
+      />
+    </div>
+
+    <div class="flex justify-between mt-6">
+      <button
+        id="closePaymentModal"
+        class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+      >
+        Cancel
+      </button>
+      <button
+        id="payWithPaystack"
+        class="px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
+      >
+        Pay Now
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Auth Modal -->
+<div id="authModal" class="auth-modal hidden">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4">
+    <!-- Close Button -->
+    <button
+      id="closeAuthModal"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+    >
+      <i class="fas fa-times text-xl"></i>
+    </button>
+
+    <!-- Tabs -->
+    <div class="flex border-b">
+      <button
+        id="loginTab"
+        class="flex-1 py-3 text-center font-medium active-tab"
+      >
+        Login
+      </button>
+      <button
+        id="registerTab"
+        class="flex-1 py-3 text-center font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+      >
+        Register
+      </button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="p-6 fade-in">
+      <h3 class="text-xl font-bold mb-6 text-center">
+        Login to Your Account
+      </h3>
+      <form id="loginUserForm">
         <div class="mb-4">
-          <label
-            for="customersPhone"
-            class="block text-sm font-medium text-gray-700"
+          <label class="block text-gray-700 mb-2" for="loginEmail"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="loginEmail"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <div id="loginEmailError" class="error-message hidden"></div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 mb-2" for="loginPassword"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="loginPassword"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <div id="loginPasswordError" class="error-message hidden"></div>
+        </div>
+        <div class="mb-4 text-right">
+          <button
+            type="button"
+            id="showForgotPassword"
+            class="text-sm text-blue-500 hover:underline"
+          >
+            Forgot Password?
+          </button>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" class="p-6 hidden fade-in">
+      <h3 class="text-xl font-bold mb-6 text-center">Create an Account</h3>
+      <form id="registerUserForm">
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-gray-700 mb-2" for="registerFirstName"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="registerFirstName"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <div
+              id="registerFirstNameError"
+              class="error-message hidden"
+            ></div>
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2" for="registerLastName"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              id="registerLastName"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <div
+              id="registerLastNameError"
+              class="error-message hidden"
+            ></div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="registerEmail"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="registerEmail"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <div id="registerEmailError" class="error-message hidden"></div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="registerPhone"
             >Phone Number</label
           >
           <input
             type="tel"
-            id="customersPhone"
-            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+            id="registerPhone"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
+          <div id="registerPhoneError" class="error-message hidden"></div>
         </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 mb-2" for="registerPassword"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="registerPassword"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <div
+            id="registerPasswordError"
+            class="error-message hidden"
+          ></div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
+        >
+          Register
+        </button>
+      </form>
+    </div>
 
+    <!-- Verification Form -->
+    <div id="verificationForm" class="p-6 hidden">
+      <h3 class="text-xl font-bold mb-6 text-center">Verify Your Email</h3>
+      <p
+        class="text-sm text-gray-600 mb-6 text-center"
+        id="verificationMessage"
+      >
+        We've sent a 6-digit verification code to your email address. Please
+        enter it below.
+      </p>
+
+      <div class="flex justify-center space-x-2 mb-6">
+        <input
+          type="text"
+          maxlength="1"
+          class="verification-digit"
+          data-index="0"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="verification-digit"
+          data-index="1"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="verification-digit"
+          data-index="2"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="verification-digit"
+          data-index="3"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="verification-digit"
+          data-index="4"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="verification-digit"
+          data-index="5"
+        />
+      </div>
+
+      <button
+        id="verifyCodeBtn"
+        class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition mb-3"
+      >
+        Verify Code
+      </button>
+      <button
+        id="resendCodeBtn"
+        class="w-full bg-gray-500 text-white py-3 rounded-lg font-medium hover:bg-gray-600 transition mb-3"
+      >
+        Resend Code
+      </button>
+      <button
+        id="backToRegisterFromVerify"
+        class="w-full text-blue-500 py-2"
+      >
+        Back to Registration
+      </button>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div id="forgotPasswordForm" class="p-6 hidden">
+      <h3 class="text-xl font-bold mb-6 text-center">Reset Password</h3>
+      <form id="forgotPasswordUserForm">
         <div class="mb-4">
-          <label
-            for="customersEmail"
-            class="block text-sm font-medium text-gray-700"
-            >Email Address</label
+          <label class="block text-gray-700 mb-2" for="forgotPasswordEmail"
+            >Email</label
           >
           <input
             type="email"
-            id="customersEmail"
-            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+            id="forgotPasswordEmail"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
+          <div
+            id="forgotPasswordEmailError"
+            class="error-message hidden"
+          ></div>
         </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
+        >
+          Send Reset Code
+        </button>
+      </form>
+      <div class="text-center mt-4">
+        <button
+          id="backToLoginFromForgot"
+          class="text-sm text-blue-500 hover:underline"
+        >
+          Back to Login
+        </button>
+      </div>
+    </div>
 
+    <!-- Reset Password Form -->
+    <div id="resetPasswordForm" class="p-6 hidden">
+      <h3 class="text-xl font-bold mb-6 text-center">
+        Create New Password
+      </h3>
+      <form id="resetPasswordUserForm">
         <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-700"
-            >Amount to Pay</label
+          <label class="block text-gray-700 mb-2" for="resetPassword"
+            >New Password</label
           >
           <input
-            type="text"
-            id="paymentAmount"
-            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100"
-            readonly
+            type="password"
+            id="resetPassword"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
           />
+          <div id="resetPasswordError" class="error-message hidden"></div>
         </div>
-
-        <div class="flex justify-between mt-6">
-          <button
-            id="closePaymentModal"
-            class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+        <div class="mb-6">
+          <label class="block text-gray-700 mb-2" for="resetPasswordConfirm"
+            >Confirm New Password</label
           >
-            Cancel
-          </button>
-          <button
-            id="payWithPaystack"
-            class="px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
-          >
-            Pay Now
-          </button>
+          <input
+            type="password"
+            id="resetPasswordConfirm"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <div
+            id="resetPasswordConfirmError"
+            class="error-message hidden"
+          ></div>
         </div>
-      </div>
-    </div>
-
-    <!-- Auth Modal -->
-    <div id="authModal" class="auth-modal hidden">
-      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4">
-        <!-- Close Button -->
         <button
-          id="closeAuthModal"
-          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          type="submit"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
         >
-          <i class="fas fa-times text-xl"></i>
+          Reset Password
         </button>
-
-        <!-- Tabs -->
-        <div class="flex border-b">
-          <button
-            id="loginTab"
-            class="flex-1 py-3 text-center font-medium active-tab"
-          >
-            Login
-          </button>
-          <button
-            id="registerTab"
-            class="flex-1 py-3 text-center font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
-          >
-            Register
-          </button>
-        </div>
-
-        <!-- Login Form -->
-        <div id="loginForm" class="p-6 fade-in">
-          <h3 class="text-xl font-bold mb-6 text-center">
-            Login to Your Account
-          </h3>
-          <form id="loginUserForm">
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="loginEmail"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="loginEmail"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div id="loginEmailError" class="error-message hidden"></div>
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="loginPassword"
-                >Password</label
-              >
-              <input
-                type="password"
-                id="loginPassword"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div id="loginPasswordError" class="error-message hidden"></div>
-            </div>
-            <div class="mb-4 text-right">
-              <button
-                type="button"
-                id="showForgotPassword"
-                class="text-sm text-blue-500 hover:underline"
-              >
-                Forgot Password?
-              </button>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
-            >
-              Login
-            </button>
-          </form>
-        </div>
-
-        <!-- Register Form -->
-        <div id="registerForm" class="p-6 hidden fade-in">
-          <h3 class="text-xl font-bold mb-6 text-center">Create an Account</h3>
-          <form id="registerUserForm">
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div>
-                <label class="block text-gray-700 mb-2" for="registerFirstName"
-                  >First Name</label
-                >
-                <input
-                  type="text"
-                  id="registerFirstName"
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <div
-                  id="registerFirstNameError"
-                  class="error-message hidden"
-                ></div>
-              </div>
-              <div>
-                <label class="block text-gray-700 mb-2" for="registerLastName"
-                  >Last Name</label
-                >
-                <input
-                  type="text"
-                  id="registerLastName"
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <div
-                  id="registerLastNameError"
-                  class="error-message hidden"
-                ></div>
-              </div>
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="registerEmail"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="registerEmail"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div id="registerEmailError" class="error-message hidden"></div>
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="registerPhone"
-                >Phone Number</label
-              >
-              <input
-                type="tel"
-                id="registerPhone"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div id="registerPhoneError" class="error-message hidden"></div>
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="registerPassword"
-                >Password</label
-              >
-              <input
-                type="password"
-                id="registerPassword"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div
-                id="registerPasswordError"
-                class="error-message hidden"
-              ></div>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
-            >
-              Register
-            </button>
-          </form>
-        </div>
-
-        <!-- Verification Form -->
-        <div id="verificationForm" class="p-6 hidden">
-          <h3 class="text-xl font-bold mb-6 text-center">Verify Your Email</h3>
-          <p
-            class="text-sm text-gray-600 mb-6 text-center"
-            id="verificationMessage"
-          >
-            We've sent a 6-digit verification code to your email address. Please
-            enter it below.
-          </p>
-
-          <div class="flex justify-center space-x-2 mb-6">
-            <input
-              type="text"
-              maxlength="1"
-              class="verification-digit"
-              data-index="0"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="verification-digit"
-              data-index="1"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="verification-digit"
-              data-index="2"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="verification-digit"
-              data-index="3"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="verification-digit"
-              data-index="4"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="verification-digit"
-              data-index="5"
-            />
-          </div>
-
-          <button
-            id="verifyCodeBtn"
-            class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition mb-3"
-          >
-            Verify Code
-          </button>
-          <button
-            id="resendCodeBtn"
-            class="w-full bg-gray-500 text-white py-3 rounded-lg font-medium hover:bg-gray-600 transition mb-3"
-          >
-            Resend Code
-          </button>
-          <button
-            id="backToRegisterFromVerify"
-            class="w-full text-blue-500 py-2"
-          >
-            Back to Registration
-          </button>
-        </div>
-
-        <!-- Forgot Password Form -->
-        <div id="forgotPasswordForm" class="p-6 hidden">
-          <h3 class="text-xl font-bold mb-6 text-center">Reset Password</h3>
-          <form id="forgotPasswordUserForm">
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="forgotPasswordEmail"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="forgotPasswordEmail"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div
-                id="forgotPasswordEmailError"
-                class="error-message hidden"
-              ></div>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
-            >
-              Send Reset Code
-            </button>
-          </form>
-          <div class="text-center mt-4">
-            <button
-              id="backToLoginFromForgot"
-              class="text-sm text-blue-500 hover:underline"
-            >
-              Back to Login
-            </button>
-          </div>
-        </div>
-
-        <!-- Reset Password Form -->
-        <div id="resetPasswordForm" class="p-6 hidden">
-          <h3 class="text-xl font-bold mb-6 text-center">
-            Create New Password
-          </h3>
-          <form id="resetPasswordUserForm">
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="resetPassword"
-                >New Password</label
-              >
-              <input
-                type="password"
-                id="resetPassword"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div id="resetPasswordError" class="error-message hidden"></div>
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="resetPasswordConfirm"
-                >Confirm New Password</label
-              >
-              <input
-                type="password"
-                id="resetPasswordConfirm"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <div
-                id="resetPasswordConfirmError"
-                class="error-message hidden"
-              ></div>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition"
-            >
-              Reset Password
-            </button>
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
+  </div>
+</div>
 
-    <!-- Admin Dashboard Link (only for admin users) -->
-    <a id="adminDashboardLink" href="/admin/Admin.html"></a>
+<!-- Admin Dashboard Link (only for admin users) -->
+<a id="adminDashboardLink" href="/admin/Admin.html"></a>
 
-    <!-- Scripts -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
+<!-- Scripts -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
         });
       }
-    </script>
-    <script src="cms-loader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://js.paystack.co/v1/inline.js"></script>
-    <script src="equip-animation.js"></script>
-    <script src="paystact-payment.js"></script>
-    <script src="auth-utils.js"></script>
-    <script src="auth.js"></script>
-    <script src="ve.js"></script>
-    <script>
-      // Global access to auth system for booking.js
-      window.getAuthStatus = function () {
-        return {
-          isLoggedIn: () => {
-            const userData = JSON.parse(
-              localStorage.getItem("currentUser") || "{}"
-            );
-            return !!(userData && userData.email);
-          },
-          getUser: () =>
-            JSON.parse(localStorage.getItem("currentUser") || "{}"),
-        };
-      };
-    </script>
-    <script src="booking.js"></script>
-    <script src="server.js"></script>
-    <script src="nav-bar.js"></script>
-    <!-- Services Loader -->
-    <script src="/js/services-loader.js"></script>
-    <script>
-      // Initialize all components when DOM is loaded
-      document.addEventListener("DOMContentLoaded", function () {
-        // <!-- SPLIDE JS INIT -->
-        // Initialize hero carousel
-        document.addEventListener("DOMContentLoaded", function () {
-          new Splide(".hero-carousel", {
-            type: "loop",
-            autoplay: true,
-            interval: 5000, // 5 seconds
-            pauseOnHover: false,
-            arrows: false,
-            pagination: true,
-          }).mount();
-        });
+    });
+  }
+</script>
+<script src="cms-loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script
+  src="https://kit.fontawesome.com/a076d05399.js"
+  crossorigin="anonymous"
+></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="equip-animation.js"></script>
+<script src="paystact-payment.js"></script>
+<script src="auth-utils.js"></script>
+<script src="auth.js"></script>
+<script src="ve.js"></script>
+<script>
+  // Global access to auth system for booking.js
+  window.getAuthStatus = function () {
+    return {
+      isLoggedIn: () => {
+        const userData = JSON.parse(
+          localStorage.getItem("currentUser") || "{}"
+        );
+        return !!(userData && userData.email);
+      },
+      getUser: () =>
+        JSON.parse(localStorage.getItem("currentUser") || "{}"),
+    };
+  };
+</script>
+<script src="booking.js"></script>
+<script src="server.js"></script>
+<script src="nav-bar.js"></script>
+<!-- Services Loader -->
+<script src="/js/services-loader.js"></script>
+<script>
+  // Initialize all components when DOM is loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // <!-- SPLIDE JS INIT -->
+    // Initialize hero carousel
+    document.addEventListener("DOMContentLoaded", function () {
+      new Splide(".hero-carousel", {
+        type: "loop",
+        autoplay: true,
+        interval: 5000, // 5 seconds
+        pauseOnHover: false,
+        arrows: false,
+        pagination: true,
+      }).mount();
+    });
 
-        // Initialize counters
-        animateCounter("yearsCounter", 15, 2000);
-        animateCounter("successCounter", 98, 2000);
-        animateCounter("projectsCounter", 150, 2000);
+    // Initialize counters
+    animateCounter("yearsCounter", 15, 2000);
+    animateCounter("successCounter", 98, 2000);
+    animateCounter("projectsCounter", 150, 2000);
 
-        // Initialize scroll animations
-        initScrollAnimations();
+    // Initialize scroll animations
+    initScrollAnimations();
 
-        // Back to top button
-        const backToTopButton = document.getElementById("backToTop");
+    // Back to top button
+    const backToTopButton = document.getElementById("backToTop");
 
-        window.addEventListener("scroll", () => {
-          if (window.pageYOffset > 300) {
-            backToTopButton.classList.remove("hidden");
-          } else {
-            backToTopButton.classList.add("hidden");
-          }
-        });
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove("hidden");
+      } else {
+        backToTopButton.classList.add("hidden");
+      }
+    });
 
-        backToTopButton.addEventListener("click", () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-        // REPLACE THESE FUNCTIONS at the top of your file:
+    // REPLACE THESE FUNCTIONS at the top of your file:
 
-        // Add this function to check login status - FIXED VERSION
-        function checkUserLoggedIn() {
-          const userData = JSON.parse(
-            localStorage.getItem("currentUser") || "{}"
-          );
-          const isLoggedIn = !!(userData && userData.email);
-          console.log("🛒 Cart Auth Check:", isLoggedIn, userData);
-          return isLoggedIn;
-        }
+    // Add this function to check login status - FIXED VERSION
+    function checkUserLoggedIn() {
+      const userData = JSON.parse(
+        localStorage.getItem("currentUser") || "{}"
+      );
+      const isLoggedIn = !!(userData && userData.email);
+      console.log("🛒 Cart Auth Check:", isLoggedIn, userData);
+      return isLoggedIn;
+    }
 
-        // Add this function to get user data - FIXED VERSION
-        function getCurrentUser() {
-          const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
-          console.log("🛒 Current User:", user);
-          return user;
-        }
+    // Add this function to get user data - FIXED VERSION
+    function getCurrentUser() {
+      const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
+      console.log("🛒 Current User:", user);
+      return user;
+    }
 
-        // Cart functionality
-        initCartFunctionality();
+    // Cart functionality
+    initCartFunctionality();
 
-        // Form submission
-        const bookingForm = document.getElementById("bookingForm");
-        bookingForm.addEventListener("submit", (e) => {
-          e.preventDefault();
+    // Form submission
+    const bookingForm = document.getElementById("bookingForm");
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-          // Check if user is logged in
-          if (!requireLogin("book services")) {
-            return; // Stop if not logged in
-          }
+      // Check if user is logged in
+      if (!requireLogin("book services")) {
+        return; // Stop if not logged in
+      }
 
-          alert(
-            "Thank you for your booking request! Our team will contact you shortly."
-          );
-          bookingForm.reset();
-        });
+      alert(
+        "Thank you for your booking request! Our team will contact you shortly."
+      );
+      bookingForm.reset();
+    });
 
-        //view more projects
-        document
-          .querySelector(".view-more-projects")
-          .addEventListener("click", (e) => {
-            e.preventDefault();
-            alert(
-              "Showing all projects... This would navigate to a full projects page in a complete implementation."
-            );
-          });
-
-        // Handle Checkout Button for bookings
-        const checkoutButton = document.getElementById("checkoutButton");
-        if (checkoutButton) {
-          checkoutButton.addEventListener("click", function () {
-            // Check if user is logged in
-            if (!requireLogin("complete payment")) {
-              return; // Stop if not logged in
-            }
-
-            // Fill payment modal with subtotal
-            document.getElementById("paymentAmount").value =
-              "₦" + cartTotal.toLocaleString();
-            document.getElementById("paymentModal").classList.remove("hidden");
-          });
-        }
-
-        // Checkout button
-        document
-          .getElementById("checkoutButton")
-          .addEventListener("click", function () {
-            document.getElementById("cartModal").classList.add("hidden");
-            document.getElementById("paymentModal").classList.remove("hidden");
-            document.getElementById("paymentAmount").value =
-              "₦" + cartTotal.toLocaleString();
-          });
+    //view more projects
+    document
+      .querySelector(".view-more-projects")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        alert(
+          "Showing all projects... This would navigate to a full projects page in a complete implementation."
+        );
       });
 
-      // Initialize scroll animations
-      function initScrollAnimations() {
-        const sections = document.querySelectorAll(".section-hidden");
+    // Handle Checkout Button for bookings
+    const checkoutButton = document.getElementById("checkoutButton");
+    if (checkoutButton) {
+      checkoutButton.addEventListener("click", function () {
+        // Check if user is logged in
+        if (!requireLogin("complete payment")) {
+          return; // Stop if not logged in
+        }
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("section-visible");
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
+        // Fill payment modal with subtotal
+        document.getElementById("paymentAmount").value =
+          "₦" + cartTotal.toLocaleString();
+        document.getElementById("paymentModal").classList.remove("hidden");
+      });
+    }
 
-        sections.forEach((section) => {
-          observer.observe(section);
+    // Checkout button
+    document
+      .getElementById("checkoutButton")
+      .addEventListener("click", function () {
+        document.getElementById("cartModal").classList.add("hidden");
+        document.getElementById("paymentModal").classList.remove("hidden");
+        document.getElementById("paymentAmount").value =
+          "₦" + cartTotal.toLocaleString();
+      });
+  });
+
+  // Initialize scroll animations
+  function initScrollAnimations() {
+    const sections = document.querySelectorAll(".section-hidden");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("section-visible");
+          }
         });
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }
+
+  function initCartFunctionality() {
+    let cartCount = 0;
+    let cartItems = [];
+    let cartTotal = 0;
+
+    const cartIcon = document.getElementById("cartIcon");
+    const cartCountElement = document.getElementById("cartCount");
+    const cartModal = document.getElementById("cartModal");
+    const closeCart = document.getElementById("closeCart");
+    const cartItemsContainer = document.getElementById("cartItems");
+    const emptyCartMessage = document.getElementById("emptyCartMessage");
+    const cartSubtotal = document.getElementById("cartSubtotal");
+    const checkoutButton = document.getElementById("checkoutButton");
+    const paymentModal = document.getElementById("paymentModal");
+    const paymentAmount = document.getElementById("paymentAmount");
+    const payWithPaystack = document.getElementById("payWithPaystack");
+    const closePaymentModal = document.getElementById("closePaymentModal");
+    const customersEmail = document.getElementById("customersEmail");
+    const customersName = document.getElementById("customersName");
+    const customersPhone = document.getElementById("customersPhone");
+
+    // DEBUG: Check if all elements exist
+    console.log("🔍 ELEMENT CHECK:");
+    console.log("- checkoutButton:", checkoutButton);
+    console.log("- cartModal:", cartModal);
+    console.log("- paymentModal:", paymentModal);
+    console.log("- cartIcon:", cartIcon);
+
+    if (!checkoutButton) {
+      console.error("❌ CRITICAL: checkoutButton not found!");
+      return; // Stop if critical elements are missing
+    }
+
+    // --- Helpers for saving/loading cart ---
+    function saveCart() {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      localStorage.setItem("cartCount", cartCount);
+      localStorage.setItem("cartTotal", cartTotal);
+    }
+
+    function loadCart() {
+      const storedItems =
+        JSON.parse(localStorage.getItem("cartItems")) || [];
+      const storedCount = parseInt(localStorage.getItem("cartCount")) || 0;
+      const storedTotal = parseInt(localStorage.getItem("cartTotal")) || 0;
+
+      cartItems = storedItems;
+      cartCount = storedCount;
+      cartTotal = storedTotal;
+      cartCountElement.textContent = cartCount;
+      updateCartDisplay();
+    }
+
+    // Function to send email notifications for equipment orders
+    async function sendEquipmentOrderNotifications(
+      customersEmail,
+      customersName,
+      customersPhone,
+      orderDetails,
+      totalAmount,
+      reference
+    ) {
+      try {
+        const orderData = {
+          reference: reference,
+          name: customersName,
+          email: customersEmail,
+          phone: customersPhone,
+          service: "Equipment Purchase",
+          amount: totalAmount,
+          quantity: orderDetails.reduce(
+            (total, item) => total + item.quantity,
+            0
+          ),
+          paymentType: "full",
+          location: "Online Store",
+          date: new Date().toISOString().split("T")[0],
+          details: `Equipment Order: ${orderDetails.map((item) => `${item.product} (x${item.quantity})`).join(", ")}`,
+          orderDetails: orderDetails,
+        };
+
+        // Send to your existing server endpoint
+        const response = await fetch("http://localhost:3000/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(orderData),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to send notifications");
+        }
+
+        console.log("Equipment order notifications sent successfully!");
+      } catch (error) {
+        console.error("Error sending equipment notifications:", error);
+        alert(
+          "Order completed successfully! There was an issue with email notifications, but we will contact you shortly."
+        );
+      }
+    }
+
+    // Load cart on page load
+    loadCart();
+
+    // Add to cart buttons
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+    addToCartButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const productElement = button.closest(".equipment-item");
+        const productHeading = productElement.querySelector("h3");
+        const product = productHeading
+          ? productHeading.textContent.trim()
+          : "Unknown Product";
+
+        const priceElement =
+          productElement.querySelector(".text-secondary");
+        let price = 0;
+        if (priceElement) {
+          const priceText = priceElement.textContent
+            .replace("₦", "")
+            .replace(/,/g, "");
+          price = parseInt(priceText);
+        }
+
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+
+        const existingItem = cartItems.find(
+          (item) => item.product === product
+        );
+        if (existingItem) {
+          existingItem.quantity++;
+        } else {
+          cartItems.push({
+            product: product,
+            price: price,
+            quantity: 1,
+          });
+        }
+
+        cartTotal += price;
+        updateCartDisplay();
+        saveCart();
+
+        const originalText = button.textContent;
+        button.textContent = "Added to Cart!";
+        button.classList.add("bg-green-600");
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.classList.remove("bg-green-600");
+        }, 2000);
+      });
+    });
+
+    // Cart icon click
+    cartIcon.addEventListener("click", () => {
+      cartModal.classList.remove("hidden");
+    });
+
+    // Close cart
+    closeCart.addEventListener("click", () => {
+      cartModal.classList.add("hidden");
+    });
+
+    // Checkout button
+    checkoutButton.addEventListener("click", function () {
+      console.log("🎯 CHECKOUT: Button clicked!");
+      console.log("Cart items:", cartItems);
+      console.log("Cart total:", cartTotal);
+
+      if (cartItems.length === 0) {
+        console.log("❌ Cart is empty");
+        alert("Your cart is empty. Please add items before checkout.");
+        return;
       }
 
-      function initCartFunctionality() {
-        let cartCount = 0;
-        let cartItems = [];
-        let cartTotal = 0;
+      console.log("✅ Opening payment modal...");
+      paymentAmount.value = `₦${cartTotal.toLocaleString()}`;
+      paymentModal.classList.remove("hidden");
 
-        const cartIcon = document.getElementById("cartIcon");
-        const cartCountElement = document.getElementById("cartCount");
-        const cartModal = document.getElementById("cartModal");
-        const closeCart = document.getElementById("closeCart");
-        const cartItemsContainer = document.getElementById("cartItems");
-        const emptyCartMessage = document.getElementById("emptyCartMessage");
-        const cartSubtotal = document.getElementById("cartSubtotal");
-        const checkoutButton = document.getElementById("checkoutButton");
-        const paymentModal = document.getElementById("paymentModal");
-        const paymentAmount = document.getElementById("paymentAmount");
-        const payWithPaystack = document.getElementById("payWithPaystack");
-        const closePaymentModal = document.getElementById("closePaymentModal");
-        const customersEmail = document.getElementById("customersEmail");
-        const customersName = document.getElementById("customersName");
-        const customersPhone = document.getElementById("customersPhone");
+      // Auto-fill user data if available
+      const userData = JSON.parse(
+        localStorage.getItem("currentUser") || "{}"
+      );
+      if (userData && userData.email) {
+        customersName.value =
+          `${userData.firstName || ""} ${userData.lastName || ""}`.trim();
+        customersEmail.value = userData.email || "";
+        customersPhone.value = userData.phone || "";
+        console.log("✅ Auto-filled user data");
+      }
+    });
 
-        // DEBUG: Check if all elements exist
-        console.log("🔍 ELEMENT CHECK:");
-        console.log("- checkoutButton:", checkoutButton);
-        console.log("- cartModal:", cartModal);
-        console.log("- paymentModal:", paymentModal);
-        console.log("- cartIcon:", cartIcon);
+    // Close payment modal
+    closePaymentModal.addEventListener("click", () => {
+      paymentModal.classList.add("hidden");
+    });
 
-        if (!checkoutButton) {
-          console.error("❌ CRITICAL: checkoutButton not found!");
-          return; // Stop if critical elements are missing
-        }
+    // Pay with Paystack
+    // REPLACE THE PAY WITH PAYSTACK SECTION:
 
-        // --- Helpers for saving/loading cart ---
-        function saveCart() {
-          localStorage.setItem("cartItems", JSON.stringify(cartItems));
-          localStorage.setItem("cartCount", cartCount);
-          localStorage.setItem("cartTotal", cartTotal);
-        }
+    // Pay with Paystack - FIXED VERSION
+    payWithPaystack.addEventListener("click", () => {
+      console.log("💳 Paystack payment initiated from cart");
 
-        function loadCart() {
-          const storedItems =
-            JSON.parse(localStorage.getItem("cartItems")) || [];
-          const storedCount = parseInt(localStorage.getItem("cartCount")) || 0;
-          const storedTotal = parseInt(localStorage.getItem("cartTotal")) || 0;
+      // FIXED: Use the new auth system check
+      const currentUser = JSON.parse(
+        localStorage.getItem("currentUser") || "{}"
+      );
+      const isLoggedIn = !!(currentUser && currentUser.email);
 
-          cartItems = storedItems;
-          cartCount = storedCount;
-          cartTotal = storedTotal;
+      console.log("🔐 Payment Auth Check:", {
+        isLoggedIn: isLoggedIn,
+        currentUser: currentUser,
+        hasEmail: !!currentUser.email,
+        hasId: !!currentUser.id,
+      });
+
+      if (!isLoggedIn) {
+        alert("Please login to complete your purchase");
+        return;
+      }
+
+      console.log("✅ User is logged in, proceeding with payment...");
+
+      // Use logged-in user's data as primary, but allow override from form
+      const email = customersEmail.value || currentUser.email;
+      const name =
+        customersName.value ||
+        `${currentUser.firstName || ""} ${currentUser.lastName || ""}`.trim();
+      const phone = customersPhone.value || currentUser.phone;
+
+      console.log("📧 Payment details:", { email, name, phone, cartTotal });
+
+      if (!email) {
+        alert("Please enter your email");
+        return;
+      }
+
+      if (!name) {
+        alert("Please enter your name");
+        return;
+      }
+
+      if (!phone) {
+        alert("Please enter your phone number");
+        return;
+      }
+
+      if (!cartTotal || cartTotal <= 0 || isNaN(cartTotal)) {
+        alert(
+          "Error: Cart total is invalid. Please add items to your cart first."
+        );
+        return;
+      }
+
+      let cartSummary = cartItems
+        .map((item) => {
+          let totalPrice = item.price * item.quantity;
+          return `${item.product} x${item.quantity} - ₦${totalPrice.toLocaleString()}`;
+        })
+        .join(" | ");
+
+      const amountInKobo = Math.round(cartTotal * 100);
+
+      // Make sure Paystack is loaded
+      if (typeof PaystackPop === "undefined") {
+        alert("Payment service is not available. Please try again later.");
+        return;
+      }
+
+      let handler = PaystackPop.setup({
+        key: "pk_test_8e2842d4d202ae95e064cf7343ed9766506d72bb",
+        email: email,
+        amount: amountInKobo,
+        currency: "NGN",
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Cart Items",
+              variable_name: "cart_items",
+              value: cartSummary,
+            },
+            {
+              display_name: "Customer Name",
+              variable_name: "customer_name",
+              value: name,
+            },
+            {
+              display_name: "Customer Phone",
+              variable_name: "customer_phone",
+              value: phone,
+            },
+          ],
+        },
+        callback: function (response) {
+          console.log("✅ Cart payment successful:", response.reference);
+          alert("Payment successful! Reference: " + response.reference);
+          paymentModal.classList.add("hidden");
+
+          // Send email notifications for equipment order
+          sendEquipmentOrderNotifications(
+            email,
+            name,
+            phone,
+            cartItems,
+            cartTotal,
+            response.reference
+          );
+
+          // Clear cart after successful payment
+          cartItems = [];
+          cartCount = 0;
+          cartTotal = 0;
           cartCountElement.textContent = cartCount;
           updateCartDisplay();
-        }
+          saveCart();
 
-        // Function to send email notifications for equipment orders
-        async function sendEquipmentOrderNotifications(
-          customersEmail,
-          customersName,
-          customersPhone,
-          orderDetails,
-          totalAmount,
-          reference
-        ) {
-          try {
-            const orderData = {
-              reference: reference,
-              name: customersName,
-              email: customersEmail,
-              phone: customersPhone,
-              service: "Equipment Purchase",
-              amount: totalAmount,
-              quantity: orderDetails.reduce(
-                (total, item) => total + item.quantity,
-                0
-              ),
-              paymentType: "full",
-              location: "Online Store",
-              date: new Date().toISOString().split("T")[0],
-              details: `Equipment Order: ${orderDetails.map((item) => `${item.product} (x${item.quantity})`).join(", ")}`,
-              orderDetails: orderDetails,
-            };
-
-            // Send to your existing server endpoint
-            const response = await fetch("http://localhost:3000/send-email", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(orderData),
-            });
-
-            if (!response.ok) {
-              throw new Error("Failed to send notifications");
-            }
-
-            console.log("Equipment order notifications sent successfully!");
-          } catch (error) {
-            console.error("Error sending equipment notifications:", error);
-            alert(
-              "Order completed successfully! There was an issue with email notifications, but we will contact you shortly."
-            );
-          }
-        }
-
-        // Load cart on page load
-        loadCart();
-
-        // Add to cart buttons
-        const addToCartButtons = document.querySelectorAll(".add-to-cart");
-
-        addToCartButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const productElement = button.closest(".equipment-item");
-            const productHeading = productElement.querySelector("h3");
-            const product = productHeading
-              ? productHeading.textContent.trim()
-              : "Unknown Product";
-
-            const priceElement =
-              productElement.querySelector(".text-secondary");
-            let price = 0;
-            if (priceElement) {
-              const priceText = priceElement.textContent
-                .replace("₦", "")
-                .replace(/,/g, "");
-              price = parseInt(priceText);
-            }
-
-            cartCount++;
-            cartCountElement.textContent = cartCount;
-
-            const existingItem = cartItems.find(
-              (item) => item.product === product
-            );
-            if (existingItem) {
-              existingItem.quantity++;
-            } else {
-              cartItems.push({
-                product: product,
-                price: price,
-                quantity: 1,
-              });
-            }
-
-            cartTotal += price;
-            updateCartDisplay();
-            saveCart();
-
-            const originalText = button.textContent;
-            button.textContent = "Added to Cart!";
-            button.classList.add("bg-green-600");
-            setTimeout(() => {
-              button.textContent = originalText;
-              button.classList.remove("bg-green-600");
-            }, 2000);
-          });
-        });
-
-        // Cart icon click
-        cartIcon.addEventListener("click", () => {
-          cartModal.classList.remove("hidden");
-        });
-
-        // Close cart
-        closeCart.addEventListener("click", () => {
+          // Close cart modal automatically
           cartModal.classList.add("hidden");
-        });
 
-        // Checkout button
-        checkoutButton.addEventListener("click", function () {
-          console.log("🎯 CHECKOUT: Button clicked!");
-          console.log("Cart items:", cartItems);
-          console.log("Cart total:", cartTotal);
-
-          if (cartItems.length === 0) {
-            console.log("❌ Cart is empty");
-            alert("Your cart is empty. Please add items before checkout.");
-            return;
-          }
-
-          console.log("✅ Opening payment modal...");
-          paymentAmount.value = `₦${cartTotal.toLocaleString()}`;
-          paymentModal.classList.remove("hidden");
-
-          // Auto-fill user data if available
-          const userData = JSON.parse(
-            localStorage.getItem("currentUser") || "{}"
+          alert(
+            "Thank you for your purchase! Your order has been processed."
           );
-          if (userData && userData.email) {
-            customersName.value =
-              `${userData.firstName || ""} ${userData.lastName || ""}`.trim();
-            customersEmail.value = userData.email || "";
-            customersPhone.value = userData.phone || "";
-            console.log("✅ Auto-filled user data");
-          }
+        },
+        onClose: function () {
+          console.log("❌ Cart payment cancelled");
+          alert("Payment window closed.");
+        },
+      });
+
+      handler.openIframe();
+    });
+
+    // Update cart display
+    function updateCartDisplay() {
+      if (cartItems.length === 0) {
+        emptyCartMessage.classList.remove("hidden");
+        cartItemsContainer.innerHTML = "";
+        checkoutButton.disabled = true;
+        checkoutButton.classList.add("opacity-50", "cursor-not-allowed");
+      } else {
+        emptyCartMessage.classList.add("hidden");
+        checkoutButton.disabled = false;
+        checkoutButton.classList.remove("opacity-50", "cursor-not-allowed");
+
+        let cartHTML = "";
+        cartItems.forEach((item) => {
+          cartHTML += `
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <h4 class="font-medium">${item.product}</h4>
+                        <p class="text-gray-600">₦${item.price.toLocaleString()} each</p>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="text-primary decrease-quantity" data-product="${item.product}">-</button>
+                        <span class="mx-2">${item.quantity}</span>
+                        <button class="text-primary increase-quantity" data-product="${item.product}">+</button>
+                    </div>
+                </div>
+            `;
         });
+        cartItemsContainer.innerHTML = cartHTML;
 
-        // Close payment modal
-        closePaymentModal.addEventListener("click", () => {
-          paymentModal.classList.add("hidden");
-        });
-
-        // Pay with Paystack
-        // REPLACE THE PAY WITH PAYSTACK SECTION:
-
-        // Pay with Paystack - FIXED VERSION
-        payWithPaystack.addEventListener("click", () => {
-          console.log("💳 Paystack payment initiated from cart");
-
-          // FIXED: Use the new auth system check
-          const currentUser = JSON.parse(
-            localStorage.getItem("currentUser") || "{}"
-          );
-          const isLoggedIn = !!(currentUser && currentUser.email);
-
-          console.log("🔐 Payment Auth Check:", {
-            isLoggedIn: isLoggedIn,
-            currentUser: currentUser,
-            hasEmail: !!currentUser.email,
-            hasId: !!currentUser.id,
-          });
-
-          if (!isLoggedIn) {
-            alert("Please login to complete your purchase");
-            return;
-          }
-
-          console.log("✅ User is logged in, proceeding with payment...");
-
-          // Use logged-in user's data as primary, but allow override from form
-          const email = customersEmail.value || currentUser.email;
-          const name =
-            customersName.value ||
-            `${currentUser.firstName || ""} ${currentUser.lastName || ""}`.trim();
-          const phone = customersPhone.value || currentUser.phone;
-
-          console.log("📧 Payment details:", { email, name, phone, cartTotal });
-
-          if (!email) {
-            alert("Please enter your email");
-            return;
-          }
-
-          if (!name) {
-            alert("Please enter your name");
-            return;
-          }
-
-          if (!phone) {
-            alert("Please enter your phone number");
-            return;
-          }
-
-          if (!cartTotal || cartTotal <= 0 || isNaN(cartTotal)) {
-            alert(
-              "Error: Cart total is invalid. Please add items to your cart first."
-            );
-            return;
-          }
-
-          let cartSummary = cartItems
-            .map((item) => {
-              let totalPrice = item.price * item.quantity;
-              return `${item.product} x${item.quantity} - ₦${totalPrice.toLocaleString()}`;
-            })
-            .join(" | ");
-
-          const amountInKobo = Math.round(cartTotal * 100);
-
-          // Make sure Paystack is loaded
-          if (typeof PaystackPop === "undefined") {
-            alert("Payment service is not available. Please try again later.");
-            return;
-          }
-
-          let handler = PaystackPop.setup({
-            key: "pk_test_8e2842d4d202ae95e064cf7343ed9766506d72bb",
-            email: email,
-            amount: amountInKobo,
-            currency: "NGN",
-            metadata: {
-              custom_fields: [
-                {
-                  display_name: "Cart Items",
-                  variable_name: "cart_items",
-                  value: cartSummary,
-                },
-                {
-                  display_name: "Customer Name",
-                  variable_name: "customer_name",
-                  value: name,
-                },
-                {
-                  display_name: "Customer Phone",
-                  variable_name: "customer_phone",
-                  value: phone,
-                },
-              ],
-            },
-            callback: function (response) {
-              console.log("✅ Cart payment successful:", response.reference);
-              alert("Payment successful! Reference: " + response.reference);
-              paymentModal.classList.add("hidden");
-
-              // Send email notifications for equipment order
-              sendEquipmentOrderNotifications(
-                email,
-                name,
-                phone,
-                cartItems,
-                cartTotal,
-                response.reference
+        document
+          .querySelectorAll(".increase-quantity")
+          .forEach((button) => {
+            button.addEventListener("click", () => {
+              const product = button.getAttribute("data-product");
+              const item = cartItems.find(
+                (item) => item.product === product
               );
-
-              // Clear cart after successful payment
-              cartItems = [];
-              cartCount = 0;
-              cartTotal = 0;
+              item.quantity++;
+              cartCount++;
+              cartTotal += item.price;
               cartCountElement.textContent = cartCount;
               updateCartDisplay();
               saveCart();
-
-              // Close cart modal automatically
-              cartModal.classList.add("hidden");
-
-              alert(
-                "Thank you for your purchase! Your order has been processed."
-              );
-            },
-            onClose: function () {
-              console.log("❌ Cart payment cancelled");
-              alert("Payment window closed.");
-            },
+            });
           });
 
-          handler.openIframe();
-        });
+        document
+          .querySelectorAll(".decrease-quantity")
+          .forEach((button) => {
+            button.addEventListener("click", () => {
+              const product = button.getAttribute("data-product");
+              const itemIndex = cartItems.findIndex(
+                (item) => item.product === product
+              );
+              const item = cartItems[itemIndex];
 
-        // Update cart display
-        function updateCartDisplay() {
-          if (cartItems.length === 0) {
-            emptyCartMessage.classList.remove("hidden");
-            cartItemsContainer.innerHTML = "";
-            checkoutButton.disabled = true;
-            checkoutButton.classList.add("opacity-50", "cursor-not-allowed");
-          } else {
-            emptyCartMessage.classList.add("hidden");
-            checkoutButton.disabled = false;
-            checkoutButton.classList.remove("opacity-50", "cursor-not-allowed");
-
-            let cartHTML = "";
-            cartItems.forEach((item) => {
-              cartHTML += `
-                    <div class="flex justify-between items-center mb-4">
-                        <div>
-                            <h4 class="font-medium">${item.product}</h4>
-                            <p class="text-gray-600">₦${item.price.toLocaleString()} each</p>
-                        </div>
-                        <div class="flex items-center">
-                            <button class="text-primary decrease-quantity" data-product="${item.product}">-</button>
-                            <span class="mx-2">${item.quantity}</span>
-                            <button class="text-primary increase-quantity" data-product="${item.product}">+</button>
-                        </div>
-                    </div>
-                `;
+              if (item.quantity > 1) {
+                item.quantity--;
+                cartCount--;
+                cartTotal -= item.price;
+              } else {
+                cartItems.splice(itemIndex, 1);
+                cartCount--;
+                cartTotal -= item.price;
+              }
+              cartCountElement.textContent = cartCount;
+              updateCartDisplay();
+              saveCart();
             });
-            cartItemsContainer.innerHTML = cartHTML;
-
-            document
-              .querySelectorAll(".increase-quantity")
-              .forEach((button) => {
-                button.addEventListener("click", () => {
-                  const product = button.getAttribute("data-product");
-                  const item = cartItems.find(
-                    (item) => item.product === product
-                  );
-                  item.quantity++;
-                  cartCount++;
-                  cartTotal += item.price;
-                  cartCountElement.textContent = cartCount;
-                  updateCartDisplay();
-                  saveCart();
-                });
-              });
-
-            document
-              .querySelectorAll(".decrease-quantity")
-              .forEach((button) => {
-                button.addEventListener("click", () => {
-                  const product = button.getAttribute("data-product");
-                  const itemIndex = cartItems.findIndex(
-                    (item) => item.product === product
-                  );
-                  const item = cartItems[itemIndex];
-
-                  if (item.quantity > 1) {
-                    item.quantity--;
-                    cartCount--;
-                    cartTotal -= item.price;
-                  } else {
-                    cartItems.splice(itemIndex, 1);
-                    cartCount--;
-                    cartTotal -= item.price;
-                  }
-                  cartCountElement.textContent = cartCount;
-                  updateCartDisplay();
-                  saveCart();
-                });
-              });
-          }
-          cartSubtotal.textContent = `₦${cartTotal.toLocaleString()}`;
-        }
+          });
       }
+      cartSubtotal.textContent = `₦${cartTotal.toLocaleString()}`;
+    }
+  }
 
-      // Initialize cart functionality when the page loads
-      document.addEventListener("DOMContentLoaded", function () {
-        initCartFunctionality();
-      });
-      // Animated counters
-      function animateCounter(elementId, finalValue, duration) {
-        let startTime = null;
-        const element = document.getElementById(elementId);
+  // Initialize cart functionality when the page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    initCartFunctionality();
+  });
+  // Animated counters
+  function animateCounter(elementId, finalValue, duration) {
+    let startTime = null;
+    const element = document.getElementById(elementId);
 
-        function updateCounter(timestamp) {
-          if (!startTime) startTime = timestamp;
-          const progress = Math.min((timestamp - startTime) / duration, 1);
-          const value = Math.floor(progress * finalValue);
-          element.textContent = value;
+    function updateCounter(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = Math.floor(progress * finalValue);
+      element.textContent = value;
 
-          if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-          }
-        }
-
+      if (progress < 1) {
         requestAnimationFrame(updateCounter);
       }
-    </script>
+    }
+
+    requestAnimationFrame(updateCounter);
+  }
+</script>
+```
+
   </body>
 </html>
