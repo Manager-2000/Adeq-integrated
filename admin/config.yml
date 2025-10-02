@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main # or your default branch
+
+media_folder: "assets/images" # folder for uploaded images
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "index.html"
+        fields:
+          - { name: "body", label: "Page Content", widget: "markdown" }
+          
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Service Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "markdown" }
+      - { name: "price", label: "Price", widget: "number" }
+      - { name: "image", label: "Service Image", widget: "image" }
+
+  - name: "equipment"
+    label: "Equipment"
+    folder: "content/equipment"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "name", label: "Equipment Name", widget: "string" }
+      - { name: "description", label: "Description", widget: "markdown" }
+      - { name: "price", label: "Price", widget: "number" }
+      - { name: "image", label: "Equipment Image", widget: "image" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Project Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "markdown" }
+      - { name: "image", label: "Project Image", widget: "image" }
+      - { name: "category", label: "Category", widget: "string" }

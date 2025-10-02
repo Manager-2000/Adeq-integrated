@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "icon": "fas fa-search-dollar",
+      "title": "Water Surveying",
+      "description": "Professional groundwater and mining surveys using advanced technology to accurately locate water sources.",
+      "link": "#booking",
+      "linkText": "Learn more"
+    },
+    {
+      "id": 2,
+      "icon": "fas fa-toolbox",
+      "title": "Borehole Drilling",
+      "description": "Expert borehole drilling services for residential, commercial, and agricultural water supply needs.",
+      "link": "#booking",
+      "linkText": "Learn more"
+    },
+    {
+      "id": 3,
+      "icon": "fas fa-wrench",
+      "title": "Installation",
+      "description": "Complete pump and borehole installation services to ensure efficient water delivery to your property.",
+      "link": "#booking",
+      "linkText": "Learn more"
+    },
+    {
+      "id": 4,
+      "icon": "fas fa-industry",
+      "title": "Equipment Sales",
+      "description": "We offer top-quality groundwater survey equipment including ADMT systems and pool finders.",
+      "link": "#equipment",
+      "linkText": "Learn more"
+    },
+    {
+      "id": 5,
+      "icon": "fas fa-tint",
+      "title": "Water Tanks",
+      "description": "Installation of overhead water storage tanks from 4,000 to 40,000+ liters for reliable water storage.",
+      "link": "#contact",
+      "linkText": "Learn more"
+    },
+    {
+      "id": 6,
+      "icon": "fas fa-headset",
+      "title": "Consultation",
+      "description": "Get expert advice on the best water solutions for your specific needs and location.",
+      "link": "#contact",
+      "linkText": "Learn more"
+    }
+  ]
+}

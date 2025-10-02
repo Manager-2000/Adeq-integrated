@@ -1,0 +1,25 @@
+{
+  "equipment": [
+    {
+      "id": 1,
+      "name": "Borehole Machine",
+      "description": "Professional borehole drilling equipment for residential and commercial use.",
+      "price": 2500000,
+      "image": "/assets/images/borehole-machine.jpg"
+    },
+    {
+      "id": 2,
+      "name": "ADMT System",
+      "description": "Advanced groundwater detection system for accurate water source location.",
+      "price": 1800000,
+      "image": "/assets/images/admt-system.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Water Tank 10,000L",
+      "description": "High-quality overhead water storage tank with 10,000 liter capacity.",
+      "price": 150000,
+      "image": "/assets/images/water-tank.jpg"
+    }
+  ]
+}
